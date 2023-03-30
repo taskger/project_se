@@ -5,7 +5,7 @@
 
     <div class="row mt-5">
         <div class="col-md-12">
-        <h2>ข้อมูลลูกค้าและการแก้ไsข</h2>
+        <h2>ข้อมูลลูกค้าและการแก้sไsข</h2>
         <a href="{{ route('contacts.create')}}">กรอกข้อมูลลูกค้า</a>
         </div>
         <br>
