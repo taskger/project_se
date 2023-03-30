@@ -7,6 +7,8 @@
                 <h2>User Manager</h2>
             </div>
             <div class="pull-right">
+                <a class="btn btn-danger" href="{{ url()->previous() }}">ย้อนกลับ</a>
+                
                 <a class="btn btn-success" href="{{ route('manageruser.create') }}"> Create New user</a>
             </div>
         </div>

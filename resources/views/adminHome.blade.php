@@ -17,8 +17,11 @@
                     {{ __('You are logged in!') }}
                     {{ Auth::user()->role }}
 
-                    <a class="btn btn-info" href="{{ route('manageruser.index') }}">User Manager</a>
-                    <a class="btn btn-info" href="{{ route('contacts.index') }}">contacts</a>
+                    <br>
+                    <a class="btn btn-info" href="{{ route('manageruser.index') }}">ข้อมูล ACCOUNT</a>
+                    <br>
+                    <br>
+                    <a class="btn btn-info" href="{{ route('contacts.index') }}">ข้อมูลลูกค้า</a>
 
                 </div>
             </div>
