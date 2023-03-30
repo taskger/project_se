@@ -5,13 +5,18 @@
 
     <div class="row mt-5">
         <div class="col-md-12">
-        <h2>ข้อมูลลูหหหหกค้าและการแก้ไข</h2>
+        <h2>ข้อมูลลูกค้าและการแก้ไข</h2>
         <a href="{{ url()->previous() }}">ย้อนกลับ</a>
         <a href="{{ route('contacts.create')}}">กรอกข้อมูลลูกค้า</a>
         </div>
         <br>
     </div>
 
+    <div class="row mt-3">
+        <div class="col-md-6">
+            <input type="text" id="searchInput" class="form-control" placeholder="ค้นหา..." onkeyup="searchTable()">
+        </div>
+    </div>
     @if ($message = Session::get('success'))
         <div class="alert alert-success">
             {{ $message }}
@@ -54,8 +59,30 @@
                 <td>{{ $value->brand }}</td>
                 <td>{{ $value->carmodel }}</td>
                 <td>{{ $value->registrationnumber }}</td>
-                <td>{{ $value->chassisnumber }}</td>
+                <script>
 
+                function searchTable() {
+                    var input, filter, table, tr, td, i, j, txtValue;
+                    input = document.getElementById("searchInput");
+                    filter = input.value.toUpperCase();
+                    table = document.getElementsByTagName("table")[0];
+                    tr = table.getElementsByTagName("tr");
+                    for (i = 0; i < tr.length; i++) {
+                        for (j = 0; j < tr[i].cells.length; j++) {
+                            td = tr[i].getElementsByTagName("td")[j];
+                            if (td) {
+                                txtValue = td.textContent || td.innerText;
+                                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                    tr[i].style.display = "";
+                                    break;
+                                } else {
+                                    tr[i].style.display = "none";
+                                }
+                            }
+                        }
+                    }
+                }
+                </script>
             </tr>
         @endforeach
     </table>
