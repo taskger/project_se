@@ -27,6 +27,7 @@ Route::get('/home', [HomeController::class, 'index'])->name('home')->middleware(
 /*Admin*/
 Route::get('admin/home', [HomeController::class, 'adminHome'])->name('admin.home')->middleware('role');
 Route::resource('admin/manageruser', AdminmanagerController::class)->middleware('role');        
+Route::resource('admin/contacts', AdminmanagerController::class)->middleware('role');        
 
 /*Employee*/
 Route::get('employee/home', [HomeController::class, 'employeeHome'])->name('employee.home')->middleware('roleStaff');
