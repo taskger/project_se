@@ -3,7 +3,7 @@
 @section('content')
 
 
-    <a href="{{ route('contacts.index') }}" class="btn btn-primary my-3">Back</a>
+    <a href="{{ route('contacts.index') }}" class="btn btn-primary my-3">Baddck</a>
 
 
     @if ($errors->any())
