@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Athiti:wght@300;400;500;700&display=swap');
+
+
+*{
+    font-family: 'Athiti', sans-serif;
+}
+
+body{
+    background: url("../img/ev.jpg") no-repeat 0 90%;
+    background-color: #000000;
+    backdrop-filter: blur(5px);
+    height: auto;
+    width: auto ;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display:grid;
+    align-items: center;
+    justify-content: center;
+    margin: 0; 
+    text-align: center;
+}
+
+
+.form{
+    padding: 30px 40px;
+}
+.card-header{
+    text-align: left;
+    margin-bottom: 50px;
+    font-weight: 700;
+    font-size: 32px;
+
+}
+.col-md-6{
+    position: relative;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+.col-md-6 input{
+    filter: opacity(80%);
+    background-color: #f0f0f0;
+    border: 3px solid #f0f0f0;
+    border-radius: 40px;
+    width: 460px;
+    height: 50px;
+    padding: 10px;
+    font-size: 18px;
+    display: block;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    font-weight: 500;
+    text-indent: 5%;
+}
+
+
+.form-group input:focus{
+    outline: 0;
+}
+.form-group.error input{
+    border-color: red;
+}
+.form-group.success input{
+    border-color: greenyellow;
+}
+.form-group small{
+    color: red;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    visibility:hidden;
+    text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5);
+}
+
+.form-group button{
+    cursor: pointer;
+    background-color: #C3FF94;
+    color: #fff;
+    border: 0px ;
+    border-radius: 40px;
+    align-items: center;
+    margin-top: 20px;
+    margin-left: 20px;
+    width: 430px;
+    display: block;
+    font-size: 20px;
+    padding: 10px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    font-weight: 700;
+}
+.Already{
+    font-weight: bold;
+    color: white;
+}
+.SINGUP{
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+}
+.fa{
+    position: absolute;
+}
+@media screen and (max-width : 600px) {
+    body{
+        background: url("../img/ev.jpg") no-repeat 0 90%;
+        background-color: #000000;
+        backdrop-filter: blur(5px);
+        height: auto;
+        width: auto ;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        
+    }   
+    .h2{
+        text-align: left;
+        margin-left: 60px;
+        margin-bottom: 50px;
+        font-weight: 700;
+        font-size: 28px;
+    }
+    .button-area button{
+        cursor: pointer;
+        background-color: #C3FF94;
+        color: #fff;
+        border: 0px ;
+        border-radius: 40px;
+        align-items: center;
+        margin-top: 20px;
+        margin-left: 80px;
+        width: 330px;
+        display: block;
+        font-size: 20px;
+        padding: 10px;
+        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+        text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+        font-weight: 700;
+    }
+    .form{
+        padding: 30px 40px;
+    }
+    .form-group{
+        position: relative;
+        margin-left: 55px;
+        margin-bottom: 15px;
+        padding-bottom: 15px;
+    }
+    .form-group input{
+        filter: opacity(80%);
+        background-color: #f0f0f0;
+        border: 3px solid #f0f0f0;
+        border-radius: 40px;
+        width: 360px;
+        height: 20px;
+        padding: 10px;
+        font-size: 14px;
+        display: block;
+        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+        font-weight: 500;
+        text-indent: 5%;
+    }
+}
