@@ -49,7 +49,7 @@
 
                 <div class="left">
                     <strong>เบอร์</strong><br>
-                    <input type="text" name="phone" class="form-control" ></input>
+                    <input type="text" name="phone" class="form-control" maxlength="10"></input>
                 </div>
            
                 <div class="right">
@@ -64,7 +64,7 @@
             
                 <div class="right">
                     <strong>เลขบัตรประชาชน</strong><br>
-                    <input type="text" name="identification" class="form-control" ></input>
+                    <input type="text" name="identification" class="form-control" maxlength="13"></input>
                 </div>
             
                 <div class="left">
