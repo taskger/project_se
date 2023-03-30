@@ -35,24 +35,6 @@ class HomeController extends Controller
     {
         return view('adminHome');
     }
-        /**
-    * Show the application dashboard.
-    *
-    * @return \Illuminate\Contracts\Support\Renderable
-    */
-    public function supportHome()
-    {
-        return view('supportHome');
-    }
-            /**
-    * Show the application dashboard.
-    *
-    * @return \Illuminate\Contracts\Support\Renderable
-    */
-    public function brokersHome()
-    {
-        return view('brokersHome');
-    }
             /**
     * Show the application dashboard.
     *
