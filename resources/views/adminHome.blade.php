@@ -18,6 +18,8 @@
                     {{ Auth::user()->role }}
 
                     <a class="btn btn-info" href="{{ route('manageruser.index') }}">User Manager</a>
+                    <a class="btn btn-info" href="{{ route('tambon.index') }}">User Manager</a>
+
                 </div>
             </div>
         </div>
