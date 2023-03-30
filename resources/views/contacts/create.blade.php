@@ -4,7 +4,6 @@
 
 
     <a href="{{ route('contacts.index') }}" class="btn btn-primary my-3">Back</a>
-    <a href="{{ route('contacts.index') }}" class="btn btn-primary my-3">Back</a>
 
 
     @if ($errors->any())
