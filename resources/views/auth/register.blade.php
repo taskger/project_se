@@ -57,8 +57,17 @@
                                 <label for="telephone" class="col-md-4 col-form-label text-md-end"></label>
 
                                 <div class="col-md-6">
-                                    <input id="telephone" type="telephone" placeholder="Telephone" class="form-control @error('telephone') is-invalid @enderror " name="telephone" value="{{ old('telephone') }}" required autocomplete="telephone">
-
+                                    <input id="telephone" type="telephone" placeholder="Telephone" maxlength="10" onkeypress="javascript:return isNumber(event)" class="form-control @error('telephone') is-invalid @enderror " name="telephone" value="{{ old('telephone') }}" required autocomplete="telephone">
+                                    <script type="text/javascript">
+                                        function isNumber(evt)
+                                        {
+                                            var charCode = (evt.which) ? evt.which : event.keyCode
+                                            if (charCode > 31 && (charCode < 48 || charCode > 57))
+                                                return false;
+                                    
+                                            return true;
+                                        }
+                                    </script>
                                     @error('telephone')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
