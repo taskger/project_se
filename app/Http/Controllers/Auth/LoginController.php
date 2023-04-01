@@ -47,15 +47,15 @@ class LoginController extends Controller
         ]);
         if(auth()->attempt(array('email' => $input['email'], 'password' => $input ['password']))){
             if(auth()->user()->role == 'admin'){
-                return redirect()->route('admin.home');
+                return redirect()->route('admin.home')->with('status','คุณได้เข้าระบบในฐานะแอดมิน');
             }if(auth()->user()->role == 'employee'){
-                return redirect()->route('employee.home');
+                return redirect()->route('employee.home')->with('status','คุณได้เข้าระบบในฐานะพนักงาน');
             }if(auth()->user()->role == 'user'){
-                return redirect()->route('home');
+                return redirect()->route('home')->with('status',' ยินดีต้อนรับ ');
             }
 
         }else{
-            return redirect()->route('login')->with('error','Email-address or password wrong.');
+            return redirect()->route('login')->with('error','อีเมล์หรือรหัสผ่านไม่ถูกต้อง');
         }
 
         

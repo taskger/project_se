@@ -5,6 +5,8 @@ namespace App\Http\Middleware;
 use Closure;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Auth;
+
 
 class roleStaff
 {
@@ -15,6 +17,10 @@ class roleStaff
      */
     public function handle(Request $request, Closure $next): Response
     {
+        if (Auth::check() == null)
+        {
+            return redirect('login')->with('alert','กรุณาเข้าสู่ระบบ!!');
+        } 
         if (auth()->user()->role == 'employee'){
             return $next($request);
         }
@@ -22,7 +28,7 @@ class roleStaff
             return $next($request);
         }
         if (auth()->user()->role == 'user'){
-            return redirect('home');
+            return redirect('home')->with('alert','คุณไม่มีสิทธิ์เข้าถึง');
         }
     }
 }

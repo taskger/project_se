@@ -2,6 +2,12 @@
 <link rel="stylesheet" href="{{ asset('css/style.css')}}">
 @section('content')
 <i class="fa fa-user"></i>
+@if(session()->has('alert'))
+    <script>
+        alert('{{ session()->get('alert') }}');
+    </script>
+@endif 
+
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -37,21 +43,16 @@
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
+                                
                             </div>
                         </div>
 
-                        <!--<div class="row mb-3">
-                            <div class="remember offset-md-4">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-
-                                    <label class="form-check-label" for="remember">
-                                        {{ __('Remember Me') }}
-                                    </label>
-                                </div>
+                        @if (session('error'))
+                            <div class="alert alert-danger" >
+                                {{ session('error') }}
                             </div>
-                        </div>-->
-
+                        @endif
+                        
                         <div class="row mb-0">
                             <div class="form-group offset-md-4">
                                 <button type="submit" class="btn btn-primary">
@@ -69,6 +70,7 @@
                                 <p> Don't have a account? <a href="register">SIGN UP</a> </p>
                             </div>
                     </form>
+
                 </div>
             </div>
         </div>

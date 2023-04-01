@@ -46,7 +46,7 @@
 
                                     @error('email')
                                         <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $message }}</strong>
+                                            <strong>อีเมล์ไม่ถูกต้อง</strong>
                                         </span>
                                     @enderror
                                 </div>
@@ -70,7 +70,7 @@
                                     </script>
                                     @error('telephone')
                                         <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $message }}</strong>
+                                            <strong>กรุณากรอกเบอร์ให้ครบ 10 ตัว</strong>
                                         </span>
                                     @enderror
                                 </div>
@@ -80,11 +80,11 @@
                                 <label for="password" class="col-md-4 col-form-label text-md-end"></label>
 
                                 <div class="col-md-6">
-                                    <input id="password" type="password" placeholder="Password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+                                    <input id="password" type="password" placeholder="ใส่รหัสผ่าน" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
 
                                     @error('password')
-                                        <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $message }}</strong>
+                                        <span class="alert alert-danger">
+                                            <strong>รหัสผ่านน้อยกว่า 5 ตัว หรือ รหัสผ่านไม่ตรงกัน</strong>
                                         </span>
                                     @enderror
                                 </div>
@@ -93,7 +93,7 @@
                             <div class="row mb-3">
                                 <label for="password-confirm" class="col-md-4 col-form-label text-md-end"></label>
                                 <div class="col-md-6">
-                                    <input id="password-confirm" type="password" placeholder="Confirm Password" class="form-control" name="password_confirmation" required autocomplete="new-password">
+                                    <input id="password-confirm" type="password" placeholder="กรอกรหัสผ่านอีกครั้ง" class="form-control" name="password_confirmation" required autocomplete="new-password">
                                 </div>
                             </div>
                             
