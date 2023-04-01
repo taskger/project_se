@@ -1,16 +1,12 @@
 @extends('admin.manageruser.layout')
  
 @section('content')
-
     <div class="row">
-        
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2>ระบบจัดการสมาชิก</h2>
+                <h2>ระบบจัดการพนักงาน</h2>
             </div>
-
             <div class="pull-right">
-                <a class="btn btn-danger" href="{{ route('admin.home') }}">กลับหน้าหลัก</a>
                 <a class="btn btn-info" href="{{ route('manageruser.index') }}"> สมาชิกในระบบ</a>
                 <a class="btn btn-info" href="{{ route('manageruser.adminmanager') }}"> แอดมินในระบบ</a>
                 <a class="btn btn-info" href="{{ route('manageruser.employeemanager') }}"> พนักงานในระบบ</a>
@@ -19,7 +15,6 @@
     </div>
    
     @if ($message = Session::get('success'))
-    
         <div class="alert alert-success">
             <p>{{ $message }}</p>
         </div>

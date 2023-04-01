@@ -13,7 +13,19 @@ class AdminmanagerController extends Controller
     public function index()
     {
         $users = User::first()->paginate();
+        $users = User::where('role', 'user')->get();
         return view('admin.manageruser.index',compact('users'));
+    }
+
+    public function adminmanager()
+    {
+        $users = User::where('role', 'admin')->get();
+        return view('admin.manageruser.adminmanager', compact('users'));
+    }
+    public function employeemanager()
+    {
+        $users = User::where('role', 'employee')->get();
+        return view('admin.manageruser.employeemanager', compact('users'));
     }
 
     /**
@@ -60,11 +72,15 @@ class AdminmanagerController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, User $user)
     {
         $request->validate([
+            'role' => 'required',
             'name' => 'required',
+            'surname' => 'required',
             'email' => 'required',
+            'telephone' => 'required',
+            'password' => 'required',
 
         ]);
     
