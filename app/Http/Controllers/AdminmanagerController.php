@@ -26,7 +26,7 @@ class AdminmanagerController extends Controller
         $users = User::where('role', 'employee')->get();
         return view('admin.manageruser.employeemanager', compact('users'));
     }
-
+    
     /**
      * Show the form for creating a new resource.
      */
