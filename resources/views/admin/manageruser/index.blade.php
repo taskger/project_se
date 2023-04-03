@@ -67,6 +67,6 @@
                 @endphp
         @endforeach
     </table>
-  
+
       
 @endsection

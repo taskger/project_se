@@ -18,57 +18,49 @@
         </div>
     @endif
 
-    <form action="{{ route('manageruser.update') }}" method="POST">
-    @csrf
-  
-     <div class="row">
-     <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-            <label for="role">เลือกสถานะ</label>
+    <form action="{{ route('manageruser.update', $user->id) }}" method="post">
+        @csrf
+        @method('put')
 
-                <select name="role" id="role">
-                    <option value="user">ผู้ใช้งาน</option>
-                    <option value="admin">แอดมิน</option>
-                    <option value="employee">พนักงาน</option>
+                
+                <br>
+                <div><h1>ข้อมูลของ {{ $user->name }} {{ $user->surname }} </h1></div>
+
+                <div class="left">
+                    <br><strong>สถานะ {{ $user->role }}</strong><br>
+                </div>               
+                <select name="role" id="role" class="form-control" >
                 </select>
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>Name:</strong>
-                <input type="text" name="name" class="form-control" placeholder="Name">
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>Surname:</strong>
-                <input class="form-control" name="surname" placeholder="Surname"></input>
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>Email:</strong>
-                <input class="form-control" name="email" placeholder="Email"></input>
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>Telephone:</strong>
-                <input class="form-control" name="telephone" placeholder="Telephone"></input>
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="password">
-                <strong>Password:</strong>
-                <input class="form-control" name="password" placeholder="Password"></input>
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-                <button type="submit" class="btn btn-primary">Submit</button>
-        </div>
-    </div>
-   
-</form>
+
+                <div class="left">
+                    <br><strong>ชื่อ</strong><br>
+                    <input type="text" name="name" value="{{ $user->name }}" class="form-control"></input>
+                </div>
+
+
+                <div class="right">
+                    <strong>นามสกุล</strong><br>
+                    <input type="text" name="surname" value="{{ $user->surname }}" class="form-control" ></input>
+                </div>
+
+                <div class="left">
+                    <strong>เบอร์</strong><br>
+                    <input type="text" name="telephone" value="{{ $user->telephone }}" class="form-control" ></input>
+                </div>
+
+                <div class="right">
+                    <strong>อีเมล</strong><br>
+                    <input type="text" name="email" value="{{ $user->email }}" class="form-control" ></input>
+                </div>
+
+                <div class="submitcreate">
+                    <button type="submit" class="btn btn-success my-3">Update</button>
+                </div>
+
+            
+
+        
+    </form>
 
 
 
