@@ -12,9 +12,8 @@ class AdminmanagerController extends Controller
      */
     public function index()
     {
-        $users = User::first()->paginate();
-        $users = User::where('role', 'user')->get();
-        return view('admin.manageruser.index',compact('users'));
+            $users = User::where('role', 'user')->get();
+            return view('admin.manageruser.index',compact('users'));
     }
 
     public function adminmanager()
@@ -40,39 +39,7 @@ class AdminmanagerController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
-    {
-        $request->validate([
-            'name' => 'required',
-            'email' => 'required',
-        ]);
-    
-        User::create($request->all());
-     
-        return redirect()->route('manageruser.index')
-                        ->with('success','User created successfully.');
-    }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(User $user)
-    {
-        return view('admin.manageruser.show',compact('user'));
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(User $user)
-    {
-        return view('admin.manageruser.edit',compact('user'));
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, User $user)
+    public function store(Request $request,User $user)
     {
         $request->validate([
             'role' => 'required',
@@ -84,19 +51,55 @@ class AdminmanagerController extends Controller
 
         ]);
     
-        $user->update($request->all());
+        User::create($request->all());
     
         return redirect()->route('manageruser.index')
+                        ->with('success','User created successfully.');
+    }
+
+    /**
+     * Display the specified resource.
+     */
+    public function show($user_id)
+    {
+        $user = User::find($user_id);
+        return view('admin.manageruser.show', compact('user'));
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     */
+    public function edit($user_id)
+    {
+        $user = User::find($user_id);
+        return view('admin.manageruser.edit', compact('user'));
+    }
+    /**
+     * Update the specified resource in storage.
+     */
+    public function update(Request $request, $user_id)
+    {
+        $request->validate([
+            'name' => 'required',
+            'surname' => 'required',
+            'email' => 'required',
+            'telephone' => 'required',
+
+        ]);
+        $user = User::find($user_id);
+
+        $user->update($request->all());
+        return redirect()->route('manageruser.index', ['User' => $user])
                         ->with('success','User updated successfully');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy($user_id)
     {
+        $user = User::find($user_id);
         $user->delete();
-    
         return redirect()->route('manageruser.index')
                         ->with('success','User deleted successfully');
     }

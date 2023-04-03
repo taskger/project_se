@@ -24,7 +24,7 @@
                     <div class="box">{{ $contact->prefix }}</div>
                                        
                 </div>
-                
+
                 <br>
                 <div class="left">
                     <br><strong>ชื่อ</strong><br>
