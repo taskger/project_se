@@ -1,4 +1,52 @@
-.M1{
+.m1{
     background-color: black;
     color: aqua;
+    /* margin-left: 50px; */
+    text-align: center;
+    height: 40px;
+}
+.box{
+    width: 90%;
+    height: 30px;
+    background-color: rgb(255, 241, 241);
+    border-radius: 10px;
+    align-items: center;
+    margin-left: 90px;
+}
+.pngbox{
+    width: 100px;
+    height: 10px;
+    align-items: center;
+}
+.txtbox{
+    text-align: center;
+}
+.btnbox{
+    margin-left: 180vh;
+    margin-top: 5px;
+}
+.pngfile{
+    align-items: center;
+    margin-left: 570px;
+    margin-top: 5px;
+}
+.btnargree{
+    height: 60px;
+    width: 60px;
+    background-color: rgb(47, 255, 47);
+    /* background: black; */
+    text-align: center;
+    border-radius: 20px;
+    margin-left: 550px;
+    margin-top: 20px;
+}
+.btndisargree{
+    height: 60px;
+    width: 60px;
+    background-color: rgb(47, 255, 47);
+    /* background: black; */
+    text-align: center;
+    border-radius: 20px;
+    margin-left: 250px;
+    margin-top: 20px;
 }

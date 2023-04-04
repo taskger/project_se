@@ -8,6 +8,26 @@
     <title>Document</title>
 </head>
 <body>
-    <h4 class = "M1"></h4>
+    <h1 class = "m1">ประกัน Axa</h1>
+    <h3 class = "txtbox">สำเนาบัตรประชาชน</h3>
+    <div class = "box">
+        <input accept=".png,.jpg,.pdf" type="file" name = "File" class = "pngfile">
+    </div>
+    <h3 class = "txtbox">สำเนาใบขับขี่รถยนต์</h3>
+    <div class = "box">
+        <input accept=".png,.jpg,.pdf" type="file" name = "File" class = "pngfile">
+    </div>
+    <h3 class = "txtbox">สำเนาหนังสือการจดทะเบียนรถยนต์</h3>
+    <div class = "box">
+        <input accept=".png,.jpg,.pdf" type="file" name = "File" class = "pngfile">
+    </div>
+    <h3 class = "txtbox">สำเนากรมธรรม์ประกันรถยนต์ฉบับปัจจุบันที่กำลังจะหมดอายุ</h3>
+    <div class = "box">
+         <input accept=".png,.jpg,.pdf" type="file" name = "File" class = "pngfile">
+    </div>
+    <div>
+        <button id = "btn" class = "btnargree">ยืนยัน</button>
+        <button  class = "btndisargree">ยกเลิก</button>
+    </div>
 </body>
 </html>

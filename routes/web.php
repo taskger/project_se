@@ -5,6 +5,8 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminmanagerController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\AddfileController;
+use App\Http\Controllers\FileUploadController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -33,6 +35,8 @@ Route::get('admin/adminmanager', [AdminmanagerController::class, 'adminmanager']
 Route::get('admin/employeemanager', [AdminmanagerController::class, 'employeemanager'])->name('manageruser.employeemanager')->middleware('role');        
 Route::resource('admin/contacts', ContactController::class)->middleware('role');       
 Route::get('admin/addfile', [AddfileController::class, 'addfile'])->name('addfile.index')->middleware('role');
+Route::get('file-upload', [FileUploadController::class, 'index']);
+Route::post('store', [FileUploadController::class, 'store']);
 
 
 /*Employee*/
