@@ -54,7 +54,33 @@ class ContactController extends Controller
             'registrationprovince' => 'required',
             'chassisnumber' => ['required', 'string'],
             'carpaint' => ['required', 'string']
-        ]);
+        ],[
+            'firstname.required' => "กรุณาใส่ชื่อของท่านด้วย",
+            'lastname.required' => "กรุณาใส่นามสกุลของท่านด้วย",
+            'phone.required' => "กรุณาใส่เบอร์ของท่านด้วย",
+            'phone.max:10' => "กรุณาใส่เบอร์ไม่เกิน 10 หลัก",
+            'email.required' => "กรุณาใส่อีเมลของท่านด้วย",
+            'birthday.required' => "กรุณาใส่ปีเกิดของท่านด้วย",
+            'identification.required' => "กรุณาใส่เลขบัตรประชาชนของท่านด้วย",
+            'identification.max:13' => "กรุณาใส่เลขบัตรประชาชนไม่เกิน 13 หลัก",
+            'career.required' => "กรุณาใส่อาชีพของท่านด้วย",  
+            'province.required' => "กรุณาเลือกจังหวัดของท่านด้วย",
+            'amphoe.required' => "กรุณาเลือกอำเภอของท่านด้วย",
+            'tambon.required' => "กรุณาเลือกตำบลของท่านด้วย",
+            'input_zipcode.required' => "กรุณาใส่เลขรหัสไปรษณีย์ของท่านด้วย",
+            'address.required' => "กรุณาใส่ที่อยู่ของท่านด้วย",
+            'road.required' => "กรุณาใส่ถนนของท่านด้วย",
+            'coverstartdate.required' => "กรุณาใส่วันเริ่มประกันของท่านด้วย",
+            'brand.required' => "กรุณาใส่ยี่ห้อรถของท่านด้วย",
+            'carmodel.required' => "กรุณาใส่รุ่นรถของท่านด้วย",
+            'caryear.required' => "กรุณาใส่ปีรถของท่านด้วย",
+            'registrationnumber.required' => "กรุณาใส่เลขทะเบียนรถของท่านด้วย",
+            'registrationprovince.required' => "กรุณาใส่จังหวัดที่จดทะเบียนรถของท่านด้วย",
+            'chassisnumber.required' => "กรุณาใส่เลขตัวถังของท่านด้วย",
+            'carpaint.required' => "กรุณาใส่สีรถของท่านด้วย"
+
+        ]
+        );
 
         Contact::create($request->all());
 
@@ -110,7 +136,33 @@ class ContactController extends Controller
             'chassisnumber' => ['required', 'string'],
             'carpaint' => ['required', 'string']
 
-        ]);
+        ],[
+            'firstname.required' => "กรุณาใส่ชื่อของท่านด้วย",
+            'lastname.required' => "กรุณาใส่นามสกุลของท่านด้วย",
+            'phone.required' => "กรุณาใส่เบอร์ของท่านด้วย",
+            'phone.max:10' => "กรุณาใส่เบอร์ไม่เกิน 10 หลัก",
+            'email.required' => "กรุณาใส่อีเมลของท่านด้วย",
+            'birthday.required' => "กรุณาใส่ปีเกิดของท่านด้วย",
+            'identification.required' => "กรุณาใส่เลขบัตรประชาชนของท่านด้วย",
+            'identification.max:13' => "กรุณาใส่เลขบัตรประชาชนไม่เกิน 13 หลัก",
+            'career.required' => "กรุณาใส่อาชีพของท่านด้วย",  
+            'province.required' => "กรุณาเลือกจังหวัดของท่านด้วย",
+            'amphoe.required' => "กรุณาเลือกอำเภอของท่านด้วย",
+            'tambon.required' => "กรุณาเลือกตำบลของท่านด้วย",
+            'input_zipcode.required' => "กรุณาใส่เลขรหัสไปรษณีย์ของท่านด้วย",
+            'address.required' => "กรุณาใส่ที่อยู่ของท่านด้วย",
+            'road.required' => "กรุณาใส่ถนนของท่านด้วย",
+            'coverstartdate.required' => "กรุณาใส่วันเริ่มประกันของท่านด้วย",
+            'brand.required' => "กรุณาใส่ยี่ห้อรถของท่านด้วย",
+            'carmodel.required' => "กรุณาใส่รุ่นรถของท่านด้วย",
+            'caryear.required' => "กรุณาใส่ปีรถของท่านด้วย",
+            'registrationnumber.required' => "กรุณาใส่เลขทะเบียนรถของท่านด้วย",
+            'registrationprovince.required' => "กรุณาใส่จังหวัดที่จดทะเบียนรถของท่านด้วย",
+            'chassisnumber.required' => "กรุณาใส่เลขตัวถังของท่านด้วย",
+            'carpaint.required' => "กรุณาใส่สีรถของท่านด้วย"
+
+        ]
+        );
 
         $contact->update($request->all());
         redirect()->route('contacts.index')
