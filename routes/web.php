@@ -6,6 +6,7 @@ use App\Http\Controllers\AdminmanagerController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\AddfileController;
 use App\Http\Controllers\FileUploadController;
+use App\Http\Controllers\PostController;
 
 
 /*
@@ -42,3 +43,4 @@ Route::post('store', [FileUploadController::class, 'store']);
 
 /*Employee*/
 Route::get('employee/home', [HomeController::class, 'employeeHome'])->name('employee.home')->middleware('roleStaff');
+Route::resource('posts', PostController::class);
