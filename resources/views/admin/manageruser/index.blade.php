@@ -29,8 +29,8 @@
     <table class="table table-bordered">
         <tr>
             <th>No</th>
-            <th>Name</th>
             <th>Profile</th>
+            <th>Name</th>
             <th>Surname</th>
             <th>telephone</th>
             <th>Role</th>
@@ -54,10 +54,10 @@
                 <td>{{ $user->email }}</td>
                 <td>
                     <form action="{{ route('manageruser.destroy',$user->id) }}" method="POST">
-    
+
                         <a class="btn btn-info" href="{{ route('manageruser.show',$user->id) }}">Show</a>
-        
                         <a class="btn btn-primary" href="{{ route('manageruser.edit',$user->id) }}">Edit</a>
+
     
                         @csrf
                         @method('DELETE')
