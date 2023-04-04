@@ -15,7 +15,7 @@
                             <div class="row mb-3">
                                 <label for="name" class="col-md-4 col-form-label text-md-end"></label>
                                 <div class="col-md-6">
-                                    <input id="name" type="text" placeholder="First name" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+                                    <input id="name" type="text" placeholder="ชื่อ" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
 
                                     @error('name')
                                         <span class="invalid-feedback" role="alert">
@@ -28,7 +28,7 @@
                             <div class="row mb-3">
                                 <label for="surname" class="col-md-4 col-form-label text-md-end"></label>
                                 <div class="col-md-6">
-                                    <input id="surname" type="text" placeholder="Last name" class="form-control @error('surname') is-invalid @enderror" name="surname" value="{{ old('surname') }}" required autocomplete="surname" autofocus>
+                                    <input id="surname" type="text" placeholder="นามสกุล" class="form-control @error('surname') is-invalid @enderror" name="surname" value="{{ old('surname') }}" required autocomplete="surname" autofocus>
 
                                     @error('surname')
                                         <span class="invalid-feedback" role="alert">
@@ -42,7 +42,7 @@
                             <div class="row mb-3">
                                 <label for="email" class="col-md-4 col-form-label text-md-end"></label>
                                 <div class="col-md-6">
-                                    <input id="email" type="email" placeholder="Email Address" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+                                    <input id="email" type="email" placeholder="กรอกอีเมล" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
 
                                     @error('email')
                                         <span class="invalid-feedback" role="alert">
@@ -57,7 +57,7 @@
                                 <label for="telephone" class="col-md-4 col-form-label text-md-end"></label>
 
                                 <div class="col-md-6">
-                                    <input id="telephone" type="telephone" placeholder="Telephone" maxlength="10" onkeypress="javascript:return isNumber(event)" class="form-control @error('telephone') is-invalid @enderror " name="telephone" value="{{ old('telephone') }}" required autocomplete="telephone">
+                                    <input id="telephone" type="telephone" placeholder="0x-xxx-xxxx" maxlength="10" onkeypress="javascript:return isNumber(event)" class="form-control @error('telephone') is-invalid @enderror " name="telephone" value="{{ old('telephone') }}" required autocomplete="telephone">
                                     <script type="text/javascript">
                                         function isNumber(evt)
                                         {
