@@ -6,7 +6,7 @@ use App\Http\Controllers\AdminmanagerController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\AddfileController;
 use App\Http\Controllers\FileUploadController;
-use App\Http\Controllers\FileUploadController2;
+
 
 /*
 |--------------------------------------------------------------------------
