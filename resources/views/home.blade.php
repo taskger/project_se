@@ -27,6 +27,7 @@
                     @endif 
                     {{ __('You are user') }}
                     {{ Auth::user()->role }}
+                    test
                     
                 </div>
             </div>
@@ -34,4 +35,3 @@
     </div>
 </div>
 @endsection
-อะไรก็ได้
