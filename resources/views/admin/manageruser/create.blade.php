@@ -23,7 +23,7 @@
     </div>
 @endif
    
-<form action="{{ route('manageruser.store') }}" method="POST">
+<form action="{{ route('manageruser.store') }}" method="POST" enctype="multipart/form-data">
     @csrf
   
      <div class="row">
@@ -37,6 +37,10 @@
                     <option value="employee">พนักงาน</option>
                 </select>
             </div>
+        </div>
+        <div class="form-group mb-3">
+            <label for="">Profile Image</label>
+            <input type="file" name="profile_image" class="form-control">
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
