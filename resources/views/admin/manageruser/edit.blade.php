@@ -1,9 +1,11 @@
 @extends('admin.manageruser.layout')
+<link rel="stylesheet" href="{{ asset('css/stylemanager.css')}}">
 
 @section('content')
 
 
         <h2>Edit</h2>
+        
         <a href="{{ route('manageruser.index') }}" class="btn btn-primary my-3">Back</a>
 
 
@@ -24,18 +26,18 @@
 
                 
                 <br>
-                <div><h1>ข้อมูลของ {{ $user->name }} {{ $user->surname }} </h1></div>
+                <div>
+                    <h1>
+                    <img src="{{ asset('uploads/profiles/'.$user->profile_image) }}" width="100px" height="100px" alt="Image">    
+                    ข้อมูลของ {{ $user->name }} {{ $user->surname }} 
+                        
+                    </h1>
+                </div>
 
-                <div class="left">
-                    <br><strong>สถานะ {{ $user->role }}</strong><br>
-                </div>               
-                <select name="role" id="role" class="form-control" >
-                </select>
 
                 <div class="form-group mb-3">
-                    <label for="">Profile Image</label>
+                    <label for="">อัพโหลดรูปโปรไฟล์</label>
                     <input type="file" name="profile_image" class="form-control">
-                    <img src="{{ asset('uploads/profiles/'.$user->profile_image) }}" width="70px" height="70px" alt="Image">
                 </div>
                 <div class="left">
                     <br><strong>ชื่อ</strong><br>

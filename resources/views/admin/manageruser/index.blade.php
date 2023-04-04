@@ -1,5 +1,5 @@
-@extends('admin.manageruser.layout')
 <link rel="stylesheet" href="{{ asset('css/stylemanager.css')}}">
+@extends('admin.manageruser.layout')
 
 @section('content')
 ิ<body>
