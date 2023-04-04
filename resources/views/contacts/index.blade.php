@@ -45,6 +45,7 @@
                     <form action="{{ route('contacts.destroy', $value->id) }}" method="post">
                         <a href="{{ route('contacts.show', $value->id) }}" class="btn btn-primary">Show</a>
                         <a href="{{ route('contacts.edit', $value->id) }}" class="btn btn-secondary">Edit</a>
+                        <a href="" class="btn btn-secondary">Print</a>
                         @csrf
                         @method('DELETE')
                         <button type="submit" class="btn btn-danger">Detele</button>
