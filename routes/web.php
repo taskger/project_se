@@ -33,7 +33,7 @@ Route::get('admin/home', [HomeController::class, 'adminHome'])->name('admin.home
 Route::resource('admin/manageruser', AdminmanagerController::class)->middleware('roleStaff');        
 Route::get('admin/adminmanager', [AdminmanagerController::class, 'adminmanager'])->name('manageruser.adminmanager')->middleware('role');        
 Route::get('admin/employeemanager', [AdminmanagerController::class, 'employeemanager'])->name('manageruser.employeemanager')->middleware('role');        
-Route::resource('admin/contacts', ContactController::class)->middleware('role');       
+Route::resource('admin/contacts', ContactController::class);       
 Route::get('admin/addfile', [AddfileController::class, 'addfile'])->name('addfile.index')->middleware('role');
 Route::get('file-upload', [FileUploadController::class, 'index'])->name('file-upload.index');
 Route::post('store', [FileUploadController::class, 'store']);
