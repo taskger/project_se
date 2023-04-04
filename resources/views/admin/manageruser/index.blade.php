@@ -30,6 +30,7 @@
         <tr>
             <th>No</th>
             <th>Name</th>
+            <th>Profile</th>
             <th>Surname</th>
             <th>telephone</th>
             <th>Role</th>
@@ -43,6 +44,9 @@
         @foreach ($users as $user)
             <tr> 
                 <td>{{ $rowNumber }}</td>
+                <td>
+                     <img src="{{ asset('uploads/profiles/'.$user->profile_image) }}" width="70px" height="70px" alt="Image">
+                </td>
                 <td>{{ $user->name }}</td>
                 <td>{{ $user->surname }}</td>
                 <td>{{ $user->telephone }}</td>
@@ -58,7 +62,7 @@
                         @csrf
                         @method('DELETE')
         
-                        <button type="submit" class="btn btn-danger">Delete</button>
+                        <button type="submit" class="btn btn-danger" onclick="return myFunction();">Delete</button>
                     </form>
                 </td>
             </tr>
@@ -68,5 +72,10 @@
         @endforeach
     </table>
 
-      
+    <script>
+  function myFunction() {
+      if(!confirm("คุณยืนยันที่จะลบข้อมูล"))
+      event.preventDefault();
+  }
+ </script>     
 @endsection

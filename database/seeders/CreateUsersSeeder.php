@@ -17,6 +17,7 @@ class CreateUsersSeeder extends Seeder
     {
         $user = [
             [
+                'profile_image' => '1680628623.png',
                 'name' => 'User',
                 'surname' => 'suruser',
                 'telephone' => '123',
@@ -24,6 +25,7 @@ class CreateUsersSeeder extends Seeder
                 'password' => 'user',
             ],
             [
+                'profile_image' => '1680628623.png',
                 'name' => 'Admin',
                 'surname' => 'suradmin',
                 'telephone' => '1231231231',
@@ -32,6 +34,7 @@ class CreateUsersSeeder extends Seeder
                 'password' => '1234',
             ],
             [
+                'profile_image' => '1680628623.png',
                 'name' => 'employee',
                 'surname' => 'suremployee',
                 'telephone' => '123',

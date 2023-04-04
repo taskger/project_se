@@ -18,7 +18,7 @@
         </div>
     @endif
 
-    <form action="{{ route('manageruser.update', $user->id) }}" method="post">
+    <form action="{{ route('manageruser.update', $user->id) }}" method="post" enctype="multipart/form-data">
         @csrf
         @method('put')
 
@@ -32,6 +32,11 @@
                 <select name="role" id="role" class="form-control" >
                 </select>
 
+                <div class="form-group mb-3">
+                    <label for="">Profile Image</label>
+                    <input type="file" name="profile_image" class="form-control">
+                    <img src="{{ asset('uploads/profiles/'.$user->profile_image) }}" width="70px" height="70px" alt="Image">
+                </div>
                 <div class="left">
                     <br><strong>ชื่อ</strong><br>
                     <input type="text" name="name" value="{{ $user->name }}" class="form-control"></input>
