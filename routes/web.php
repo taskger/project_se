@@ -9,7 +9,7 @@ use App\Http\Controllers\FileUploadController;
 use App\Http\Controllers\PrintController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\UploadController;
-
+use App\Http\Controllers\SelectController;
 
 /*
 |--------------------------------------------------------------------------
@@ -38,6 +38,7 @@ Route::get('admin/adminmanager', [AdminmanagerController::class, 'adminmanager']
 Route::get('admin/employeemanager', [AdminmanagerController::class, 'employeemanager'])->name('manageruser.employeemanager')->middleware('role');        
 Route::resource('admin/contacts', ContactController::class)->middleware('role');
 Route::resource('admin/contacts', ContactController::class);       
+Route::get('selectmain', [SelectController::class, 'index'])->name('selectmain');
 
 Route::get('file-upload', [FileUploadController::class, 'index'])->name('file-upload.index');
 Route::post('store', [FileUploadController::class, 'store']);
