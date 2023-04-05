@@ -9,3 +9,11 @@
     width: 100px;
     border-radius: 10px;
 }
+.btn-insert{
+    background-color: aqua;
+    width: 150px;
+    border-radius: 5px;
+}
+.form-control{
+    margin-left: 1100px;
+}
