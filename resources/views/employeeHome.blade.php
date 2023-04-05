@@ -21,6 +21,8 @@
                     @endif 
                     {{ __('You are logged in!') }}
                     {{ Auth::user()->role }}
+                    <a class="btn btn-info" href="{{ route('manageruser.index') }}">ข้อมูล ACCOUNT</a>
+
                 </div>
             </div>
         </div>

@@ -22,7 +22,8 @@
                     <br>
                     <br>
                     <a class="btn btn-info" href="{{ route('contacts.index') }}">ข้อมูลลูกค้า</a>
-                    <a class="btn btn-info" href="{{ route('addfile.index') }}">Hello world</a>
+                    <a class="btn btn-info" href="{{ route('file-upload.index') }}">File-Upload</a>
+                    <a class="btn btn-info" href="{{ route('print.index') }}">print</a>
                 </div>
             </div>
         </div>

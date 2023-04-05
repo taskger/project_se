@@ -90,72 +90,25 @@ body{
 }
 .Already{
     font-weight: bold;
-    color: white;
+    color: #000000;
+    text-shadow:1px 1px 40px #ffffff;
+
 }
 .SINGUP{
     font-weight: bold;
-    color: rgb(0, 0, 0);
+    color: #000000;
+    text-shadow:1px 1px 40px #ffffff;
+
 }
 .fa{
     position: absolute;
 }
-@media screen and (max-width : 600px) {
-    body{
-        background: url("../img/ev.jpg") no-repeat 0 90%;
-        background-color: #000000;
-        backdrop-filter: blur(5px);
-        height: auto;
-        width: auto ;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-        
-    }   
-    .h2{
-        text-align: left;
-        margin-left: 60px;
-        margin-bottom: 50px;
-        font-weight: 700;
-        font-size: 28px;
+@media screen and (max-width : 500px) {
+    .form-group button{
+        width: 300px;
     }
-    .button-area button{
-        cursor: pointer;
-        background-color: #C3FF94;
-        color: #fff;
-        border: 0px ;
-        border-radius: 40px;
-        align-items: center;
-        margin-top: 20px;
-        margin-left: 80px;
-        width: 330px;
-        display: block;
-        font-size: 20px;
-        padding: 10px;
-        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-        text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-        font-weight: 700;
-    }
-    .form{
-        padding: 30px 40px;
-    }
-    .form-group{
-        position: relative;
-        margin-left: 55px;
-        margin-bottom: 15px;
-        padding-bottom: 15px;
-    }
-    .form-group input{
-        filter: opacity(80%);
-        background-color: #f0f0f0;
-        border: 3px solid #f0f0f0;
-        border-radius: 40px;
-        width: 360px;
-        height: 20px;
-        padding: 10px;
-        font-size: 14px;
-        display: block;
-        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-        font-weight: 500;
-        text-indent: 5%;
+    .col-md-6 input{
+        width: 340px;
+        height: 50px;
     }
 }

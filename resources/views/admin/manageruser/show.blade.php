@@ -17,6 +17,9 @@
     <div class="left">
         <br><strong>ชื่อ</strong><br>
         <div class="box">{{ $user->name }}</div>
+        <td>
+                     <img src="{{ asset('uploads/profiles/'.$user->profile_image) }}" width="200px" height="200px" alt="Image">
+                </td>
     </div>
     </div>
 
