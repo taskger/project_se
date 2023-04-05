@@ -8,6 +8,7 @@ use App\Http\Controllers\AddfileController;
 use App\Http\Controllers\FileUploadController;
 use App\Http\Controllers\PrintController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\UploadController;
 
 
 /*
@@ -42,6 +43,10 @@ Route::get('file-upload', [FileUploadController::class, 'index'])->name('file-up
 Route::post('store', [FileUploadController::class, 'store']);
 Route::get('admin/print', [PrintController::class, 'getAllUserdata'])->name('print.index')->middleware('role');
 Route::get('admin/print/download-pdf',[PrintController::class,'downloadPDF']);
+
+// Route::get('/upload-file', [UploadController::class, 'index'])->name('upload-file.index');
+// Route::post('/multiple-file-upload', [UploadController::class, 'multipleUpload']);
+
 
 
 /*Employee*/
