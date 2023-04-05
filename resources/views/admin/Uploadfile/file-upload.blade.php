@@ -24,7 +24,6 @@
                   <button type="submit" class="btn" id="submit">Submit</button>
                   <a class="btnreturn" href="{{ route('file-upload2.index') }}">ต่อไป</a>
                   <a class="btnreturn" href="{{ route('admin.home') }}">ย้อนกลับ</a>
-
               </div>
           </div>     
       </form>
