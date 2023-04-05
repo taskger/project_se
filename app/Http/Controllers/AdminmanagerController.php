@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
+
 
 class AdminmanagerController extends Controller
 {
@@ -48,13 +50,24 @@ class AdminmanagerController extends Controller
             'email' => 'required',
             'telephone' => 'required',
             'password' => 'required',
-
         ]);
-    
-        User::create($request->all());
-    
+        if($request->hasfile('profile_image'))
+        {
+            $file = $request->file('profile_image');
+            $extention = $file->getClientOriginalExtension();
+            $filename = time().'.'.$extention;
+            $file->move('uploads/profiles/', $filename);
+            $user->profile_image = $filename;
+        }
+        $user->role = $request->role;
+        $user->name = $request->name;
+        $user->surname = $request->surname;
+        $user->email = $request->email;
+        $user->telephone = $request->telephone;
+        $user->password = Hash::make($request->password);
+        $user->save();
         return redirect()->route('manageruser.index')
-                        ->with('success','User created successfully.');
+                    ->with('success','User created successfully.');
     }
 
     /**
@@ -87,8 +100,25 @@ class AdminmanagerController extends Controller
 
         ]);
         $user = User::find($user_id);
-
-        $user->update($request->all());
+        if($request->hasfile('profile_image'))
+        {
+            $destination = 'uploads/profiles/'.$user->profile_image;
+            if(File::exists($destination))
+            {
+                File::delete($destination);
+            }
+            $file = $request->file('profile_image');
+            $extention = $file->getClientOriginalExtension();
+            $filename = time().'.'.$extention;
+            $file->move('uploads/profiles/', $filename);
+            $user->profile_image = $filename;
+        }
+        $user->name = $request->name;
+        $user->surname = $request->surname;
+        $user->email = $request->email;
+        $user->telephone = $request->telephone;
+        $user->password = Hash::make($request->password);
+        $user->update();
         return redirect()->route('manageruser.index', ['User' => $user])
                         ->with('success','User updated successfully');
     }

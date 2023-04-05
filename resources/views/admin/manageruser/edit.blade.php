@@ -1,9 +1,11 @@
 @extends('admin.manageruser.layout')
+<link rel="stylesheet" href="{{ asset('css/stylemanager.css')}}">
 
 @section('content')
 
 
         <h2>Edit</h2>
+        
         <a href="{{ route('manageruser.index') }}" class="btn btn-primary my-3">Back</a>
 
 
@@ -18,20 +20,25 @@
         </div>
     @endif
 
-    <form action="{{ route('manageruser.update', $user->id) }}" method="post">
+    <form action="{{ route('manageruser.update', $user->id) }}" method="post" enctype="multipart/form-data">
         @csrf
         @method('put')
 
                 
                 <br>
-                <div><h1>ข้อมูลของ {{ $user->name }} {{ $user->surname }} </h1></div>
+                <div>
+                    <h1>
+                    <img src="{{ asset('uploads/profiles/'.$user->profile_image) }}" width="100px" height="100px" alt="Image">    
+                    ข้อมูลของ {{ $user->name }} {{ $user->surname }} 
+                        
+                    </h1>
+                </div>
 
-                <div class="left">
-                    <br><strong>สถานะ {{ $user->role }}</strong><br>
-                </div>               
-                <select name="role" id="role" class="form-control" >
-                </select>
 
+                <div class="form-group mb-3">
+                    <label for="">อัพโหลดรูปโปรไฟล์</label>
+                    <input type="file" name="profile_image" class="form-control">
+                </div>
                 <div class="left">
                     <br><strong>ชื่อ</strong><br>
                     <input type="text" name="name" value="{{ $user->name }}" class="form-control"></input>
