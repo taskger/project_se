@@ -1,5 +1,4 @@
 body{
-    background: url("../img/ev.jpg") no-repeat 0 90%;
     background-color: #000000;
     backdrop-filter: blur(5px);
     height: auto;
@@ -22,7 +21,7 @@ body{
 .button img{
     filter: drop-shadow(2px 2px 2px #707070);
     position: relative;
-    left: 0px;
+    left: 400px;
     top: 35px;
 }
 .table {
@@ -40,15 +39,17 @@ body{
     height: 50px;
     left: 10;
     top: 0;
+    
 }
 .row .pull-left{
     position: fixed;
-    text-size-adjust: 100%;
     left: 20;
     top: 5;
+    font-size: small;
 }
 .row .pull-right{
     position: fixed;
     right: 50;
     top: 5;
+    
 }

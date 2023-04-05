@@ -39,7 +39,6 @@
     </a>
 
     <table class="table">
-        <thead class="thead-dark">
         <tr>
             <th>No</th>
             <th>Profile</th>
@@ -50,7 +49,6 @@
             <th>Email</th>
             <th width="180px">Action</th>
         </tr>
-        </thead>
         @php
             $rowNumber = 1;
         @endphp
