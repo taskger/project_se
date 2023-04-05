@@ -44,11 +44,6 @@ Route::post('store', [FileUploadController::class, 'store']);
 Route::get('admin/print', [PrintController::class, 'getAllUserdata'])->name('print.index')->middleware('role');
 Route::get('admin/print/download-pdf',[PrintController::class,'downloadPDF']);
 
-// Route::get('/upload-file', [UploadController::class, 'index'])->name('upload-file.index');
-// Route::post('/multiple-file-upload', [UploadController::class, 'multipleUpload']);
-
-
-
 /*Employee*/
 Route::get('employee/home', [HomeController::class, 'employeeHome'])->name('employee.home')->middleware('roleStaff');
 Route::resource('posts', PostController::class);
