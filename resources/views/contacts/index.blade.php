@@ -7,7 +7,7 @@
         <div class="col-md-12">
         <h2 class = "name">ข้อมูลลูกค้าและการแก้ไข</h2>
         <a href="{{ url()->previous() }}" class = "btn-back">ย้อนกลับ</a>
-        <a href="{{ route('contacts.create')}}">กรอกข้อมูลลูกค้า</a>
+        <a href="{{ route('contacts.create')}}" class = "btn-insert">กรอกข้อมูลลูกค้า</a>
         </div>
         <br>
     </div>
@@ -43,9 +43,10 @@
             <tr style="height:100px, width:400px">
                 <td>
                     <form action="{{ route('contacts.destroy', $value->id) }}" method="post">
+                        <!-- <button href = "{{ route('contacts.show', $value->id) }}" class =>Show</button> -->
                         <a href="{{ route('contacts.show', $value->id) }}" class="btn btn-primary">Show</a>
                         <a href="{{ route('contacts.edit', $value->id) }}" class="btn btn-secondary">Edit</a>
-                        <a href="" class="btn btn-secondary">Print</a>
+                        <!-- <a href="" class="btn btn-secondary">Print</a> -->
                         @csrf
                         @method('DELETE')
                         <button type="submit" class="btn btn-danger">Detele</button>

@@ -24,7 +24,7 @@
               <h3 class = "png">สำเนาใบขับขี่รถยนต์</h3>
               <div class="col-md-12">
                   <div class="form-group">
-                      <input type="file" name="file" placeholder="Choose file" id="file" class = "btnadd">
+                      <input type="file" name="file2" placeholder="Choose file" id="file" class = "btnadd">
                         @error('file')
                         <div class="mt-1">{{ $message }}</div>
                         @enderror
@@ -34,7 +34,7 @@
               <h3 class = "png">สำเนาหนังสือการจดทะเบียนรถยนต์</h3>
               <div class="col-md-12">
                   <div class="form-group">
-                      <input type="file" name="file" placeholder="Choose file" id="file" class = "btnadd">
+                      <input type="file" name="file3" placeholder="Choose file" id="file" class = "btnadd">
                         @error('file')
                         <div class="mt-1">{{ $message }}</div>
                         @enderror
@@ -44,7 +44,7 @@
               <h3 class = "png">สำเนากรมธรรม์ประกันรถยนต์ฉบับปัจจุบันที่กำลังจะหมดอายุ</h3>
               <div class="col-md-12">
                   <div class="form-group">
-                      <input type="file" name="file" placeholder="Choose file" id="file" class = "btnadd">
+                      <input type="file" name="file4" placeholder="Choose file" id="file" class = "btnadd">
                         @error('file')
                         <div class="mt-1">{{ $message }}</div>
                         @enderror
