@@ -1,5 +1,6 @@
 @extends('admin.manageruser.layout')
- 
+<link rel="stylesheet" href="{{ asset('css/stylemanager.css')}}">
+
 @section('content')
     <div class="row">
         <div class="col-lg-12 margin-tb">
@@ -19,9 +20,13 @@
             <p>{{ $message }}</p>
         </div>
     @endif
-    <br><a class="btn btn-success btn-lg btn-block" href="{{ route('manageruser.create') }}"> Create New user</a>
+    <br><a class="button" href="{{ route('manageruser.create') }}" >
 
-    <table class="table table-bordered">
+            <img width="40px" class="plus_icon" src="{{URL::asset('/img/plus_icongreen.png')}}">
+
+        </a>
+
+    <table class="table">
         <tr>
             <th>No</th>
             <th>Profile</th>
@@ -30,7 +35,7 @@
             <th>telephone</th>
             <th>Role</th>
             <th>Email</th>
-            <th width="280px">Action</th>
+            <th width="180px">Action</th>
         </tr>
         @php
             $rowNumber = 1;
@@ -50,13 +55,21 @@
                 <td>
                     <form action="{{ route('manageruser.destroy',$user->id) }}" method="POST">
     
-                        <a class="btn btn-info" href="{{ route('manageruser.show',$user->id) }}">Show</a>
-                        <a class="btn btn-primary" href="{{ route('manageruser.edit',$user->id) }}">Edit</a>
+                        <a class="btn btn-link" href="{{ route('manageruser.show',$user->id) }}">
+                            <img  width="20px" src="{{URL::asset('/img/show.png')}}">
+
+                        </a>
+                        <a class="btns" href="{{ route('manageruser.edit',$user->id) }} ">
+                            <img  width="20px" src="{{URL::asset('/img/edit.png')}}">
+                        </a>
     
                         @csrf
                         @method('DELETE')
         
-                        <button type="submit" class="btn btn-danger" onclick="return myFunction();">Delete</button>
+                        <button type="submit" class="btn btn-link" onclick="return myFunction();">
+                            <img  width="20px" class="plus_icon" src="{{URL::asset('/img/delete-32.png')}}">
+
+                        </button>
                     </form>
                 </td>
             </tr>
