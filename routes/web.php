@@ -9,7 +9,9 @@ use App\Http\Controllers\FileUploadController;
 use App\Http\Controllers\PrintController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\UploadController;
-
+use App\Http\Controllers\FileUploadController2;
+use App\Http\Controllers\FileUploadController3;
+use App\Http\Controllers\FileUploadController4;
 
 /*
 |--------------------------------------------------------------------------
@@ -46,13 +48,15 @@ Route::delete('contacts/{contact}', [ContactController::class, 'destroy'])->name
 
 Route::get('file-upload', [FileUploadController::class, 'index'])->name('file-upload.index');
 Route::post('store', [FileUploadController::class, 'store']);
+Route::get('file-upload2', [FileUploadController2::class, 'index'])->name('file-upload2.index');
+Route::post('store', [FileUploadController2::class, 'store']);
+Route::get('file-upload3', [FileUploadController3::class, 'index'])->name('file-upload3.index');
+Route::post('store', [FileUploadController3::class, 'store']);
+Route::get('file-upload4', [FileUploadController4::class, 'index'])->name('file-upload4.index');
+Route::post('store', [FileUploadController4::class, 'store']);
+
 Route::get('admin/print', [PrintController::class, 'getAllUserdata'])->name('print.index')->middleware('role');
 Route::get('admin/print/download-pdf',[PrintController::class,'downloadPDF']);
-
-// Route::get('/upload-file', [UploadController::class, 'index'])->name('upload-file.index');
-// Route::post('/multiple-file-upload', [UploadController::class, 'multipleUpload']);
-
-
 
 /*Employee*/
 Route::get('employee/home', [HomeController::class, 'employeeHome'])->name('employee.home')->middleware('roleStaff');
