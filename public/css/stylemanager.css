@@ -1,16 +1,11 @@
 body{
-    background-color: #000000;
-    backdrop-filter: blur(5px);
-    height: auto;
-    width: auto ;
+    background: url("../img/bggray.png") no-repeat 0 90%;
+    height: 100%;
+    width: 100% ;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     display:grid;
-    align-items: center;
-    justify-content: center;
-    margin: 0; 
-    text-align: center;
 }
 .table{
     background-color: rgb(255, 255, 255);
@@ -21,7 +16,7 @@ body{
 .button img{
     filter: drop-shadow(2px 2px 2px #707070);
     position: relative;
-    left: 400px;
+    left: 1000px;
     top: 35px;
 }
 .table {
@@ -35,21 +30,18 @@ body{
     filter: drop-shadow(1px 1px 2px #707070);
     position: absolute;
     background-color: #ffffff;
-    width: 102% ;
+    width: 100% ;
     height: 50px;
     left: 10;
     top: 0;
-    
 }
 .row .pull-left{
     position: fixed;
     left: 20;
     top: 5;
-    font-size: small;
 }
 .row .pull-right{
     position: fixed;
     right: 50;
     top: 5;
-    
 }

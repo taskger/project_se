@@ -19,7 +19,7 @@
             </div>
 
             <div class="pull-right">
-                <a class="btn btn-info" href="{{ route('manageruser.index') }}" > สมาชิกในระบบ</a>
+                <a class="btn btn-primary" href="{{ route('manageruser.index') }}" > สมาชิกในระบบ</a>
                 <a class="btn btn-info" href="{{ route('manageruser.adminmanager') }}"> แอดมินในระบบ</a>
                 <a class="btn btn-info" href="{{ route('manageruser.employeemanager') }}"> พนักงานในระบบ</a>
             </div>
