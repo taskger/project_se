@@ -18,7 +18,7 @@
                 <h2>EVCARE
                 <a class="btn btn-primary" href="{{ route('manageruser.index') }}" > แนะนำการเลือกประกัน </a>
                 <a class="btn btn-secondary" href="{{ route('manageruser.adminmanager') }}"> ประกันรถEV </a>
-                <a class="btn btn-info" href="{{ route('manageruser.employeemanager') }}"> ต่อประกันรถยนต์</a>
+                <a class="btn btn-info" href="http://127.0.0.1:8000/file-upload"> ต่อประกันรถยนต์</a>
                 <a class="btn btn-warning" href="{{ route('manageruser.employeemanager') }}"> เช็คสถานะรถ</a>
                 </h2>
             </div>
