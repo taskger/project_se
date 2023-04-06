@@ -10,11 +10,7 @@ class advertscontroller extends Controller
     //creat index
     public function index(){
         $data['Adverts'] = Adverts:: orderby('id', 'asc')->paginate(5);
-        return view('a  dverts.index', $data);
-    }
-        public function am(){
-        $data['Adverts'] = Adverts:: orderby('id', 'asc')->paginate(5);
-        return view('adverts.am ', $data);
+        return view('adverts.index', $data);
     }
 
     //creat resourc

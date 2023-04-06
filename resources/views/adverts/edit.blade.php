@@ -47,7 +47,7 @@
                 <div class="form-group mt-3">
                     <label for="">Image</label>
                     <input type="file" name="img_image" class="form-control">
-                    <img src="{{ asset('uplode/adverts/'.$adverts -> img_image)}}" width="70px" height="70px" alt="Image">
+                    <img src="{{ asset('uplode/adverts/'.$adverts -> img_image)}}" width="50px" height="50px" alt="Image">
                 </div>
                 <div class="col-md-12">
                      <button type="submit" class="mt-3 btn btn-primary">submit</button>

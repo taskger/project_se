@@ -30,8 +30,8 @@
                         </td>
                         <td>
                             <form action="{{ route('adverts.destroy', $adverts->id ) }}" method="POST">
-                                <a class="btn btn-link" href="{{ route('adverts.show',$adverts->id) }}">
-                                    <img src="{{asset('uploads/img/'.$adverts->img_image)}}" width="1400px" height="400px" alt="image">
+                                <a class="btn btn-link"href=" http://127.0.0.1:8000/axa ">
+                                    <img src="{{asset('uploads/img/'.$adverts->img_image)}}" width="1350px" height="450px" alt="image">
                                 </a>
                                 <a class="btn btn-primary" href="{{ route('adverts.edit',$adverts->id) }}">Edit</a>
 
