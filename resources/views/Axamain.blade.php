@@ -29,8 +29,6 @@
     <li> บริษัทฯ ขอสงวนสิทธิ์ในการเปลี่ยนแปลงเงื่อนไขต่างๆ โดยไม่ต้องแจ้งให้ทราบล่วงหน้า</li>
 </ul>
     <br/><br/><a href="http://127.0.0.1:8000/admin/contacts/create"><p align ="right">ซื้อประกัน</p>
-    <div class="icon-bar">
-        <a class="active"href="#"><i class="fa fa-Home"></i></a>
-    </div>
+    <br/><br/><a href=><p align ="right">แชทซื้อประกัน</p>
 <body>
 </html>
