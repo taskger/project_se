@@ -3,11 +3,11 @@
 
 @section('content')
 
-
-        <h2>แก้ไขข้อมูล</h2>
-        <div class="pull-right">
+    <div class="pull-right">
             <a href="{{ route('manageruser.index') }}" class="btn btn-primary my-3">Back</a>
         </div>
+        <h2>แก้ไขข้อมูล</h2>
+        
 
 
     @if ($errors->any())
@@ -27,7 +27,7 @@
 
                 
                 <br>
-                <div>
+                <div class="name">
                     <h1>
                     <img src="{{ asset('uploads/profiles/'.$user->profile_image) }}" width="100px" height="100px" alt="Image">    
                     ข้อมูลของ {{ $user->name }} {{ $user->surname }} 
@@ -37,27 +37,27 @@
 
 
                 <div class="form-group mb-3">
-                    <label for="">อัพโหลดรูปโปรไฟล์</label>
+                    <strong><label for="">อัพโหลดรูปโปรไฟล์</label></strong>
                     <input type="file" name="profile_image" class="form-control">
                 </div>
                 <div class="left">
-                    <br><strong>ชื่อ</strong><br>
+                    <strong>ชื่อ</strong>
                     <input type="text" name="name" value="{{ $user->name }}" class="form-control"></input>
                 </div>
 
 
                 <div class="right">
-                    <strong>นามสกุล</strong><br>
+                    <strong>นามสกุล</strong>
                     <input type="text" name="surname" value="{{ $user->surname }}" class="form-control" ></input>
                 </div>
 
                 <div class="left">
-                    <strong>เบอร์</strong><br>
+                    <strong>เบอร์</strong>
                     <input type="text" name="telephone" value="{{ $user->telephone }}" class="form-control" ></input>
                 </div>
 
                 <div class="right">
-                    <strong>อีเมล</strong><br>
+                    <strong>อีเมล</strong>
                     <input type="text" name="email" value="{{ $user->email }}" class="form-control" ></input>
                 </div>
 
