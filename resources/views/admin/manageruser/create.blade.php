@@ -1,10 +1,10 @@
 @extends('admin.manageruser.layout')
-  
+
 @section('content')
-<div class="row">
+<div class="rowdSS">
     <div class="col-lg-12 margin-tb">
         <div class="pull-left">
-            <h2>Add New User</h2>
+            <h2>เพิ่มข้อมูล</h2>
         </div>
         <div class="pull-right">
             <a class="btn btn-primary" href="{{ route('manageruser.index') }}"> Back</a>
@@ -37,37 +37,32 @@
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
-            <label for="">Profile Image</label>
+            <label for="">อัพโหลดรูปโปรไฟล์</label>
             <input type="file" name="profile_image" class="form-control">
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Name:</strong>
-                <input type="text" name="name" class="form-control" placeholder="Name">
+                <input type="text" name="name" class="form-control" placeholder="ชื่อ">
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Surname:</strong>
-                <input class="form-control" name="surname" placeholder="Surname"></input>
+                <input class="form-control" name="surname" placeholder="นามสกุล"></input>
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Email:</strong>
-                <input class="form-control" name="email" placeholder="Email"></input>
+                <input class="form-control" name="email" placeholder="อีเมล์"></input>
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Telephone:</strong>
-                <input class="form-control" name="telephone" placeholder="Telephone"></input>
+                <input class="form-control" name="telephone" placeholder="เบอร์โทรศัพท์"></input>
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="password">
-                <strong>Password:</strong>
-                <input class="form-control" name="password" placeholder="Password"></input>
+                <input class="form-control" name="password" placeholder="รหัสผ่าน"></input>
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12 text-center">

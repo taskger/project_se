@@ -5,12 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Post extends Model
+class Adverts extends Model
 {
     use HasFactory;
-
-    protected $fillable = [
-        'a', 'b', 'c', 'd', 'e', 'f', 'profile_car'
-
+        protected $table = 'Adverts';
+        protected $fillable = [
+        'img', 'text','img_image'
     ];
 }

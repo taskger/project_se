@@ -5,12 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Post extends Model
+class Student extends Model
 {
     use HasFactory;
-
+    protected $table = students';
     protected $fillable = [
-        'a', 'b', 'c', 'd', 'e', 'f', 'profile_car'
-
-    ];
+        'name',
+        'email',
+        'course',
+        'profile_image'
+    ]
 }
