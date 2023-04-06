@@ -1,3 +1,7 @@
+<?php
+header('Content-Type: application/json');
+header('Access-Control-Allow-Origin: *');
+?>
 @extends('layouts.app')
 @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 @section('content')
@@ -17,18 +21,15 @@
                 
                 <div class="card-body">
 
-
-
                     @if(session()->has('alert'))
                         <script>
                             alert('{{ session()->get('alert') }}');
                         </script>
-
                     @endif 
+
                     {{ __('You are user') }}
                     {{ Auth::user()->role }}
                     test
-                    
                 </div>
             </div>
         </div>

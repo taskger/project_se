@@ -5,11 +5,11 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\File;
  
-class FileUploadController extends Controller
+class FileUploadController2 extends Controller
 {
      public function index()
     {
-        return view('admin.Uploadfile.file-upload');
+        return view('admin.Uploadfile.file-upload2');
     }
  
     public function store(Request $request)
@@ -32,7 +32,7 @@ class FileUploadController extends Controller
         $save->name = $name;
         $save->path = $path;
  
-        return redirect('file-upload')->with('status', 'File Has been uploaded successfully');
+        return redirect('file-upload2')->with('status', 'File Has been uploaded successfully');
  
     }
 }

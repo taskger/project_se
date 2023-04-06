@@ -3,9 +3,81 @@
     width: 300px;
     text-align: center;
     border-radius: 10px;
+    margin-top: 100px;
 }
 .btn-back{
-    background-color: lightgreen;
-    width: 100px;
+    background-color: red;
+    width: 150px;
     border-radius: 10px;
+}
+.btn-insert{
+    background-color: green;
+    width: 150px;
+    border-radius: 5px;
+}
+.btn-info{
+    background-color: #0000CC;
+    width: 150px;
+}
+.form-control{
+    margin-left: 1100px;
+}
+ ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #666;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+  
+ li {
+    float: left;
+    border-right: 1px solid #bbb;
+}
+  
+ li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+  
+  /* Change the link color to #111 (black) on hover */
+ li a:hover {
+    background-color: #111;
+}
+  
+.active {
+    background-color: #4CAF50;
+}
+.btn-primary{
+    background-color: aqua;
+    text-align: center;
+}
+.btn-secondary{
+    background-color: lightgrey;
+    text-align: center;
+}
+.usr{
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+.usr td,#usr th{
+    border: 1px solid #ddd;
+    padding : 8px;
+}
+.usr tr:nth-child(even){
+    background-color: aqua;
+}
+.usr th{
+    padding-top : 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: green;
+    color: #fff;
 }

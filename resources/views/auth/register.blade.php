@@ -84,7 +84,7 @@
 
                                     @error('password')
                                         <span class="alert alert-danger">
-                                            <strong>รหัสผ่านน้อยกว่า 5 ตัว หรือ รหัสผ่านไม่ตรงกัน</strong>
+                                            <strong>รหัสผ่านน้อยกว่า 8 ตัว หรือ รหัสผ่านไม่ตรงกัน</strong>
                                         </span>
                                     @enderror
                                 </div>
@@ -105,7 +105,7 @@
                                 </div>
                             </div>
                             <div class="Already">
-                                <p> Already have any account? <a href="login">SING IN</a> </p>
+                                <p> Already have any account? <a href="login">SIGN IN</a> </p>
                             </div>
                         </form>
                     </div>
