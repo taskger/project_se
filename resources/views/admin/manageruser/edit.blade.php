@@ -4,9 +4,10 @@
 @section('content')
 
 
-        <h2>Edit</h2>
-        
-        <a href="{{ route('manageruser.index') }}" class="btn btn-primary my-3">Back</a>
+        <h2>แก้ไขข้อมูล</h2>
+        <div class="pull-right">
+            <a href="{{ route('manageruser.index') }}" class="btn btn-primary my-3">Back</a>
+        </div>
 
 
     @if ($errors->any())
