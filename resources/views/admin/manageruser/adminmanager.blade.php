@@ -4,8 +4,10 @@
 @section('content')
     <div class="row">
         <div class="col-lg-12 margin-tb">
-            <div class="pull-left">
-                <h2>ระบบจัดการแอดมิน</h2>
+        <div class="pull-left">
+            <a href="{{ route('manageruser.index') }}" class="back">
+                <img width="40px" class="plus_icon" src="{{URL::asset('/img/arrow-back-8.png')}}">
+            </a> ระบบจัดการแอดมิน</h2>
             </div>
             <div class="pull-right">
                 <a class="btn btn-info" href="{{ route('manageruser.index') }}"> สมาชิกในระบบ</a>

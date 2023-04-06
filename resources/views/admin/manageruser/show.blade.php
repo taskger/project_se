@@ -1,25 +1,31 @@
 @extends('admin.manageruser.layout')
+<link rel="stylesheet" href="{{ asset('css/stylecreate.css')}}">
 
 @section('content')
 
     <div class="row mt-5">
         <div class="col-md-12">
-            <h2>show img_image</h2>
-            <a href="{{ route('manageruser.index') }}" class="btn btn-primary my-3">Back</a>
+            <a href="{{ url()->previous() }}" class="btn btn-link">
+                <img width="40px" class="plus_icon" src="{{URL::asset('/img/arrow-back-8.png')}}">
+            </a>
         </div>
     </div>
-
-    <table>
+    <div class="bg">
         <tr>
-            <td><strong>ชื่อ</strong></td>
-            <td>{{ $user->name }}</td>
-        </tr>
-        <tr>
-            <td><strong>รูปภาพ</strong></td>
             <td>
-                <img src="{{ asset('uploads/img/'.$user->img_image) }}" width="200px" height="200px" alt="User Image">
+            <img src="{{ asset('uploads/profiles/'.$user->profile_image) }}" width="300px" height="300px" alt="Image">
             </td>
         </tr>
-    </table>
+        <div class="textbox">
+                    <td><strong>{{ $user->name }} {{ $user->surname }}</strong></td>
+                    <br>
+                    <td>อีเมล์ &nbsp;</td>
+                    {{ $user->email }}
+                    <br>
+                    <a<strong>เบอร์ &nbsp;</a>
+                    {{ $user->telephone }}
 
+
+        </div>
+    </div>
 @endsection

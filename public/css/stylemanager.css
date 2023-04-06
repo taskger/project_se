@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Athiti:wght@300;400;500;700&display=swap');
+*{
+    font-family: 'Athiti', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+}
 body{
     background: url("../img/bggray.png") no-repeat 0 90%;
     height: 100%;
@@ -50,4 +56,33 @@ body{
     position: fixed;
     right: 50;
     top: 5;
+}
+.name{
+    text-align: center;
+}
+.back{
+    position: relative;
+
+}
+@media screen and (max-width : 800px) {
+    .button img{
+        filter: drop-shadow(2px 2px 2px #707070);
+        position: relative;
+        left: 580;
+        top: 35px;
+    }
+}
+@media screen and (max-width : 300) {
+    .button img{
+        filter: drop-shadow(2px 2px 2px #707070);
+        position: relative;
+        left: 820;
+        top: 35px;
+    }
+    .row .pull-right{
+        position: relative;
+        right: 50;
+        top: 5;
+        width: 30;
+    }
 }
