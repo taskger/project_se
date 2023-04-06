@@ -34,9 +34,9 @@ Route::get('Money1',[Payment::class,'payment'])->name('Money1.index');
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+Route::get('/', [Advertscontroller::class, 'welcome'])->name('welcome');
+
 
 Auth::routes();
 
