@@ -105,7 +105,7 @@
                                 </div>
                             </div>
                             <div class="Already">
-                                <p> Already have any account? <a href="login">SING IN</a> </p>
+                                <p> Already have any account? <a href="login">SIGN IN</a> </p>
                             </div>
                         </form>
                     </div>
