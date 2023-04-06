@@ -7,7 +7,14 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\AddfileController;
 use App\Http\Controllers\FileUploadController;
 use App\Http\Controllers\FileUploadController2;
+use App\Http\Controllers\OmiseController;
+use App\Http\Controllers\Checkpaycon;
+use App\Http\Controllers\Checkcay;
+use App\Http\Controllers\Payment;
 
+Route::get('checkcay',[Checkcay::class, 'checkcay'])->name('checkcay.index');
+Route::resource('payments',Checkpaycon::class);
+Route::get('Money1',[Payment::class,'payment'])->name('Money1.index');
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -39,6 +46,7 @@ Route::get('file-upload', [FileUploadController::class, 'index'])->name('file-up
 Route::post('store', [FileUploadController::class, 'store']);
 
 
-
 /*Employee*/
 Route::get('employee/home', [HomeController::class, 'employeeHome'])->name('employee.home')->middleware('roleStaff');
+
+ 
