@@ -16,9 +16,8 @@
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
                 <h2>EVCARE
-                <a class="btn btn-primary" href="{{ route('manageruser.index') }}" > แนะนำการเลือกประกัน </a>
-                <a class="btn btn-secondary" href="{{ route('manageruser.adminmanager') }}"> ประกันรถEV </a>
-                <a class="btn btn-info" href="http://127.0.0.1:8000/file-upload"> ต่อประกันรถยนต์</a>
+                <a class="btn btn-primary" href="http://127.0.0.1:8000/adverts" > แนะนำการเลือกประกัน </a>
+                <a class="btn btn-secondary" href="http://127.0.0.1:8000/file-upload"> ต่อประกันรถยนต์</a>
                 <a class="btn btn-warning" href="{{ route('manageruser.employeemanager') }}"> เช็คสถานะรถ</a>
                 </h2>
             </div>
