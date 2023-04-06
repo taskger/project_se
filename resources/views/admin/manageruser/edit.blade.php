@@ -60,6 +60,10 @@
                     <input type="text" name="email" value="{{ $user->email }}" class="form-control" ></input>
                 </div>
 
+                <div class="right">
+                    <strong>พาสเวิร์ด</strong><br>
+                    <input type="text" name="password" class="form-control" ></input>
+                </div>
                 <div class="submitcreate">
                     <button type="submit" class="btn btn-success my-3">Update</button>
                 </div>
