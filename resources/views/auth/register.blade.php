@@ -84,7 +84,7 @@
 
                                     @error('password')
                                         <span class="alert alert-danger">
-                                            <strong>รหัสผ่านน้อยกว่า 5 ตัว หรือ รหัสผ่านไม่ตรงกัน</strong>
+                                            <strong>รหัสผ่านน้อยกว่า 8 ตัว หรือ รหัสผ่านไม่ตรงกัน</strong>
                                         </span>
                                     @enderror
                                 </div>

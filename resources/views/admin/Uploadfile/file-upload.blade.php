@@ -20,39 +20,10 @@
                         @enderror                  
                   </div>
               </div>                 
-                
-              <h3 class = "png">สำเนาใบขับขี่รถยนต์</h3>
-              <div class="col-md-12">
-                  <div class="form-group">
-                      <input type="file" name="file" placeholder="Choose file" id="file" class = "btnadd">
-                        @error('file')
-                        <div class="mt-1">{{ $message }}</div>
-                        @enderror
-                  </div>
-              </div>   
-              
-              <h3 class = "png">สำเนาหนังสือการจดทะเบียนรถยนต์</h3>
-              <div class="col-md-12">
-                  <div class="form-group">
-                      <input type="file" name="file" placeholder="Choose file" id="file" class = "btnadd">
-                        @error('file')
-                        <div class="mt-1">{{ $message }}</div>
-                        @enderror
-                  </div>
-              </div>   
-              
-              <h3 class = "png">สำเนากรมธรรม์ประกันรถยนต์ฉบับปัจจุบันที่กำลังจะหมดอายุ</h3>
-              <div class="col-md-12">
-                  <div class="form-group">
-                      <input type="file" name="file" placeholder="Choose file" id="file" class = "btnadd">
-                        @error('file')
-                        <div class="mt-1">{{ $message }}</div>
-                        @enderror
-                  </div>
-              </div>   
               <div class="col-md-12">
                   <button type="submit" class="btn" id="submit">Submit</button>
-                  <a class="btnreturn" href="{{ route('admin.home') }}">กลับหน้าหลัก</a>
+                  <a class="btnreturn" href="{{ route('file-upload2.index') }}">ต่อไป</a>
+                  <a class="btnreturn" href="{{ route('admin.home') }}">ย้อนกลับ</a>
               </div>
           </div>     
       </form>

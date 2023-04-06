@@ -21,8 +21,10 @@ class FileUploadController extends Controller
         ]);
  
         $name = $request->file('file')->getClientOriginalName();
+
  
         $path = $request->file('file')->store('public/files');
+
  
  
         $save = new File;
@@ -30,7 +32,7 @@ class FileUploadController extends Controller
         $save->name = $name;
         $save->path = $path;
  
-        return redirect('file-upload')->with('status', 'File Has been uploaded successfully in laravel 8');
+        return redirect('file-upload')->with('status', 'File Has been uploaded successfully');
  
     }
 }

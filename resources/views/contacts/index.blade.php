@@ -2,12 +2,18 @@
 
 
 @section('content')
-
+<link rel="stylesheet" href="{{ asset('css/datauser.css')}}">
     <div class="row mt-5">
         <div class="col-md-12">
-        <h2>ข้อมูลลูกค้าและการแก้ไข</h2>
-        <a href="{{ url()->previous() }}">ย้อนกลับ</a>
-        <a href="{{ route('contacts.create')}}">กรอกข้อมูลลูกค้า</a>
+        <h2 class = "name">ข้อมูลลูกค้าและการแก้ไข</h2>
+        <!-- <a href="{{ url()->previous() }}" class = "btn-back">ย้อนกลับ</a>
+        <a href="{{ route('contacts.create')}}" class = "btn-insert">กรอกข้อมูลลูกค้า</a>
+        <a class="btn btn-info" href="{{ route('print.index') }}">print</a> -->
+        <ul>
+            <li><a href="{{ route('admin.home')}}" class = "btn-back">ย้อนกลับ</a></li>
+            <li><a href="{{ route('contacts.create')}}" class = "btn-insert">กรอกข้อมูลลูกค้า</a></li>
+            <li><a href="{{ route('print.index') }}" class="btn btn-info">print</a></li>
+        </ul>
         </div>
         <br>
     </div>
@@ -23,7 +29,7 @@
         </div>
     @endif
 
-    <table class="table table-bordered" style="width:100%">
+    <table class="usr" style="width:100%">
 
         <tr>
 
@@ -43,8 +49,10 @@
             <tr style="height:100px, width:400px">
                 <td>
                     <form action="{{ route('contacts.destroy', $value->id) }}" method="post">
-                        <a href="{{ route('contacts.show', $value->id) }}" class="btn btn-primary">Show</a>
-                        <a href="{{ route('contacts.edit', $value->id) }}" class="btn btn-secondary">Edit</a>
+                        <!-- <button href = "{{ route('contacts.show', $value->id) }}" class =>Show</button> -->
+                        <a href="{{ route('contacts.show', $value->id) }}" class="btn-primary">Show</a>
+                        <a href="{{ route('contacts.edit', $value->id) }}" class="btn-secondary">Edit</a>
+                        <!-- <a href="" class="btn btn-secondary">Print</a> -->
                         @csrf
                         @method('DELETE')
                         <button type="submit" class="btn btn-danger">Detele</button>
@@ -59,6 +67,7 @@
                 <td>{{ $value->brand }}</td>
                 <td>{{ $value->carmodel }}</td>
                 <td>{{ $value->registrationnumber }}</td>
+                <td>{{ $value->chassisnumber }}</td>
                 <script>
 
                 function searchTable() {
