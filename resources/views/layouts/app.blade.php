@@ -64,11 +64,17 @@
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
+                                    <a class="dropdown-item" href="{{ route('Profile') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('Profile-form').submit();">
+                                        {{ __('Profile') }}
+                                    </a>
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                         @csrf
                                     </form>
                                 </div>
+                                
                             </li>
 
                         @endguest

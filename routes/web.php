@@ -14,6 +14,7 @@ use App\Http\Controllers\FileUploadController2;
 use App\Http\Controllers\FileUploadController3;
 use App\Http\Controllers\FileUploadController4;
 use App\Http\Controllers\PrintController;
+use App\Http\Controllers\ProfileController;
 
 /*
 |--------------------------------------------------------------------------
@@ -49,6 +50,7 @@ Route::get('Axamain', [AxaController::class, 'inout'])->name('file-upload.index'
 Route::get('admin/print', [PrintController::class, 'getAllUserdata'])->name('print.index')->middleware('role');
 Route::get('admin/print/download-pdf',[PrintController::class,'downloadPDF']);
 Route::resource('adverts', Advertscontroller::class);
+Route::get('profile', [ProfileController::class, 'getAllUserdata'])->name('profile.index');
 
 Route::get('file-upload2', [FileUploadController2::class, 'index'])->name('file-upload2.index');
 Route::post('store', [FileUploadController2::class, 'store']);
