@@ -6,14 +6,21 @@ use App\Http\Controllers\AdminmanagerController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\AddfileController;
 use App\Http\Controllers\FileUploadController;
-use App\Http\Controllers\PrintController;
 use App\Http\Controllers\PostController;
+<<<<<<< HEAD
+use App\Http\Controllers\studentController;
+
+
+
+
+=======
 use App\Http\Controllers\AxaController;
 use App\Http\Controllers\Advertscontroller;
 use App\Http\Controllers\UploadController;
 use App\Http\Controllers\FileUploadController2;
 use App\Http\Controllers\FileUploadController3;
 use App\Http\Controllers\FileUploadController4;
+>>>>>>> f3c7981bb1d97835c163345437ccc47e9affab01
 
 /*
 |--------------------------------------------------------------------------
@@ -32,7 +39,6 @@ Route::get('/', function () {
 
 Auth::routes();
 
-
 /*User*/
 Route::get('/home', [HomeController::class, 'index'])->name('home')->middleware('roleUser');
 
@@ -41,17 +47,12 @@ Route::get('admin/home', [HomeController::class, 'adminHome'])->name('admin.home
 Route::resource('admin/manageruser', AdminmanagerController::class)->middleware('roleStaff');        
 Route::get('admin/adminmanager', [AdminmanagerController::class, 'adminmanager'])->name('manageruser.adminmanager')->middleware('role');        
 Route::get('admin/employeemanager', [AdminmanagerController::class, 'employeemanager'])->name('manageruser.employeemanager')->middleware('role');        
-Route::get('contacts', [ContactController::class, 'index'])->name('contacts.index')->middleware('roleStaff');
-Route::get('contacts/create', [ContactController::class, 'create'])->name('contacts.create')->middleware('roleUser');
-Route::post('contacts', [ContactController::class, 'store'])->name('contacts.store')->middleware('roleUser');
-Route::get('contacts/{contact}', [ContactController::class, 'show'])->name('contacts.show')->middleware('roleStaff');
-Route::get('contacts/{contact}/edit', [ContactController::class, 'edit'])->name('contacts.edit')->middleware('roleUser');
-Route::put('contacts/{contact}', [ContactController::class, 'update'])->name('contacts.update')->middleware('roleUser');
-Route::delete('contacts/{contact}', [ContactController::class, 'destroy'])->name('contacts.destroy')->middleware('roleStaff');
-
-
+Route::resource('admin/contacts', ContactController::class);       
+Route::get('admin/addfile', [AddfileController::class, 'addfile'])->name('addfile.index')->middleware('role');
 Route::get('file-upload', [FileUploadController::class, 'index'])->name('file-upload.index');
 Route::post('store', [FileUploadController::class, 'store']);
+<<<<<<< HEAD
+=======
 Route::get('axa', [AxaController::class, 'index'])->name('file-upload.index');
 Route::get('Axamain', [AxaController::class, 'inout'])->name('file-upload.index');
 Route::resource('adverts', Advertscontroller::class);
@@ -62,9 +63,10 @@ Route::get('file-upload3', [FileUploadController3::class, 'index'])->name('file-
 Route::post('store', [FileUploadController3::class, 'store']);
 Route::get('file-upload4', [FileUploadController4::class, 'index'])->name('file-upload4.index');
 Route::post('store', [FileUploadController4::class, 'store']);
+>>>>>>> f3c7981bb1d97835c163345437ccc47e9affab01
 
-Route::get('admin/print', [PrintController::class, 'getAllUserdata'])->name('print.index')->middleware('role');
-Route::get('admin/print/download-pdf',[PrintController::class,'downloadPDF']);
+
+
 
 /*Employee*/
 Route::get('employee/home', [HomeController::class, 'employeeHome'])->name('employee.home')->middleware('roleStaff');
