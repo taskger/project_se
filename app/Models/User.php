@@ -54,8 +54,8 @@ class User extends Authenticatable
      * @param  array  $data
      * @return \Illuminate\Contracts\Validation\Validator
      */
-    public function setPasswordAttribute($password)
-    {
-        $this->attributes['password'] = Hash::make($password);
-    }
+    // public function setPasswordAttribute($password)
+    // {
+    //     $this->attributes['password'] = Hash::make($password);
+    // }
 }

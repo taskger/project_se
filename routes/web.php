@@ -32,6 +32,7 @@ Route::get('/', function () {
 
 Auth::routes();
 
+
 /*User*/
 Route::get('/home', [HomeController::class, 'index'])->name('home')->middleware('roleUser');
 
@@ -40,13 +41,14 @@ Route::get('admin/home', [HomeController::class, 'adminHome'])->name('admin.home
 Route::resource('admin/manageruser', AdminmanagerController::class)->middleware('roleStaff');        
 Route::get('admin/adminmanager', [AdminmanagerController::class, 'adminmanager'])->name('manageruser.adminmanager')->middleware('role');        
 Route::get('admin/employeemanager', [AdminmanagerController::class, 'employeemanager'])->name('manageruser.employeemanager')->middleware('role');        
-Route::get('contacts', [ContactController::class, 'index'])->name('contacts.index');
-Route::get('contacts/create', [ContactController::class, 'create'])->name('contacts.create');
-Route::post('contacts', [ContactController::class, 'store'])->name('contacts.store');
-Route::get('contacts/{contact}', [ContactController::class, 'show'])->name('contacts.show');
-Route::get('contacts/{contact}/edit', [ContactController::class, 'edit'])->name('contacts.edit');
-Route::put('contacts/{contact}', [ContactController::class, 'update'])->name('contacts.update');
+Route::get('contacts', [ContactController::class, 'index'])->name('contacts.index')->middleware('roleStaff');
+Route::get('contacts/create', [ContactController::class, 'create'])->name('contacts.create')->middleware('roleUser');
+Route::post('contacts', [ContactController::class, 'store'])->name('contacts.store')->middleware('roleUser');
+Route::get('contacts/{contact}', [ContactController::class, 'show'])->name('contacts.show')->middleware('roleStaff');
+Route::get('contacts/{contact}/edit', [ContactController::class, 'edit'])->name('contacts.edit')->middleware('roleUser');
+Route::put('contacts/{contact}', [ContactController::class, 'update'])->name('contacts.update')->middleware('roleUser');
 Route::delete('contacts/{contact}', [ContactController::class, 'destroy'])->name('contacts.destroy')->middleware('roleStaff');
+
 
 Route::get('file-upload', [FileUploadController::class, 'index'])->name('file-upload.index');
 Route::post('store', [FileUploadController::class, 'store']);

@@ -5,6 +5,9 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\ResetsPasswords;
+use App\Models\User;
+use Illuminate\Support\Str;
+
 
 class ResetPasswordController extends Controller
 {
@@ -21,10 +24,24 @@ class ResetPasswordController extends Controller
 
     use ResetsPasswords;
 
+    protected function resetPassword($user, $password)
+    {
+        $user->forceFill([
+            'password' => $password,
+            'remember_token' => str_random(60),
+        ])->save();
+    
+        $this->guard()->login($user);
+    }
     /**
      * Where to redirect users after resetting their password.
      *
      * @var string
      */
     protected $redirectTo = RouteServiceProvider::HOME;
+    protected function redirectTo(){
+        if(auth()->user()->role == 'user'){
+            return redirect()->route('home')->with('status',' ยินดีต้อนรับ ');
+        }
+    }
 }

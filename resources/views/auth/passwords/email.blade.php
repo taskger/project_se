@@ -39,6 +39,9 @@
                                 </button>
                             </div>
                         </div>
+                        <div class="Already">
+                            <p><a href="{{ route('login') }}">SIGN IN</a> </p>
+                        </div>
                     </form>
                 </div>
             </div>
