@@ -9,7 +9,13 @@ use App\Http\Controllers\FileUploadController;
 use App\Http\Controllers\PrintController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\UploadController;
+<<<<<<< HEAD
 use App\Http\Controllers\SelectController;
+=======
+use App\Http\Controllers\FileUploadController2;
+use App\Http\Controllers\FileUploadController3;
+use App\Http\Controllers\FileUploadController4;
+>>>>>>> 5522acc20f26d5066e942ff2a536f63d1d0e79b5
 
 /*
 |--------------------------------------------------------------------------
@@ -42,6 +48,13 @@ Route::get('selectmain', [SelectController::class, 'index'])->name('selectmain')
 
 Route::get('file-upload', [FileUploadController::class, 'index'])->name('file-upload.index');
 Route::post('store', [FileUploadController::class, 'store']);
+Route::get('file-upload2', [FileUploadController2::class, 'index'])->name('file-upload2.index');
+Route::post('store', [FileUploadController2::class, 'store']);
+Route::get('file-upload3', [FileUploadController3::class, 'index'])->name('file-upload3.index');
+Route::post('store', [FileUploadController3::class, 'store']);
+Route::get('file-upload4', [FileUploadController4::class, 'index'])->name('file-upload4.index');
+Route::post('store', [FileUploadController4::class, 'store']);
+
 Route::get('admin/print', [PrintController::class, 'getAllUserdata'])->name('print.index')->middleware('role');
 Route::get('admin/print/download-pdf',[PrintController::class,'downloadPDF']);
 
