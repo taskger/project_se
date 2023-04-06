@@ -1647,32 +1647,32 @@ window.visualViewport.addEventListener("resize", (e) => {
  * Emoji Picker
  *-------------------------------------------------------------
  */
-const emojiButton = document.querySelector(".emoji-button");
+// const emojiButton = document.querySelector(".emoji-button");
 
-const emojiPicker = new EmojiButton({
-  theme: messengerTheme,
-  autoHide: false,
-  position: "top-start",
-});
+// const emojiPicker = new EmojiButton({
+//   theme: messengerTheme,
+//   autoHide: false,
+//   position: "top-start",
+// });
 
-emojiButton.addEventListener("click", (e) => {
-  e.preventDefault();
-  emojiPicker.togglePicker(emojiButton);
-});
+// emojiButton.addEventListener("click", (e) => {
+//   e.preventDefault();
+//   emojiPicker.togglePicker(emojiButton);
+// });
 
-emojiPicker.on("emoji", (emoji) => {
-  const el = messageInput[0];
-  const startPos = el.selectionStart;
-  const endPos = el.selectionEnd;
-  const value = messageInput.val();
-  const newValue =
-    value.substring(0, startPos) +
-    emoji +
-    value.substring(endPos, value.length);
-  messageInput.val(newValue);
-  el.selectionStart = el.selectionEnd = startPos + emoji.length;
-  el.focus();
-});
+// emojiPicker.on("emoji", (emoji) => {
+//   const el = messageInput[0];
+//   const startPos = el.selectionStart;
+//   const endPos = el.selectionEnd;
+//   const value = messageInput.val();
+//   const newValue =
+//     value.substring(0, startPos) +
+//     emoji +
+//     value.substring(endPos, value.length);
+//   messageInput.val(newValue);
+//   el.selectionStart = el.selectionEnd = startPos + emoji.length;
+//   el.focus();
+// });
 
 /**
  *-------------------------------------------------------------

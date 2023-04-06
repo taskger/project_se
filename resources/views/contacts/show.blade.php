@@ -10,7 +10,7 @@
     </div>
        
 
-
+                <a href="">print</a>
                 <br><br>
                 <div class="form1" style="font-size: 24px;"><h3>ยืนยันข้อมูลของท่าน</h3></div>
 
