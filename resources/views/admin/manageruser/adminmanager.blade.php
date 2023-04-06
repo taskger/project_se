@@ -4,8 +4,10 @@
 @section('content')
     <div class="row">
         <div class="col-lg-12 margin-tb">
-            <div class="pull-left">
-                <h2>ระบบจัดการแอดมิน</h2>
+        <div class="pull-left">
+            <a href="{{ route('manageruser.index') }}" class="back">
+                <img width="40px" class="plus_icon" src="{{URL::asset('/img/arrow-back-8.png')}}">
+            </a> ระบบจัดการแอดมิน</h2>
             </div>
             <div class="pull-right">
                 <a class="btn btn-info" href="{{ route('manageruser.index') }}"> สมาชิกในระบบ</a>
@@ -28,29 +30,22 @@
 
     <table class="table">
         <tr>
-            <th>No</th>
-            <th>Profile</th>
-            <th>Name</th>
-            <th>Surname</th>
-            <th>telephone</th>
-            <th>Role</th>
-            <th>Email</th>
+            <th>โปรไฟล์</th>
+            <th>ชื่อ</th>
+            <th>นามสกุล</th>
+            <th>เบอร์โทรศัพท์</th>
+            <th>อีเมล์</th>
             <th width="180px">Action</th>
         </tr>
-        @php
-            $rowNumber = 1;
-        @endphp
 
         @foreach ($users as $user)
             <tr> 
-                <td>{{ $rowNumber }}</td>
                 <td>
                      <img src="{{ asset('uploads/profiles/'.$user->profile_image) }}" width="70px" height="70px" alt="Image">
                 </td>
                 <td>{{ $user->name }}</td>
                 <td>{{ $user->surname }}</td>
                 <td>{{ $user->telephone }}</td>
-                <td>{{ $user->role }}</td>
                 <td>{{ $user->email }}</td>
                 <td>
                     <form action="{{ route('manageruser.destroy',$user->id) }}" method="POST">
@@ -73,9 +68,6 @@
                     </form>
                 </td>
             </tr>
-                @php
-                    $rowNumber++;
-                @endphp
         @endforeach
     </table>
   

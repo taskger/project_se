@@ -1,141 +1,154 @@
+body{
+    height: auto;
+    width: auto ;
+    display:grid;
+    align-items: center;
+    justify-content: center;
+    margin: 0; 
+    text-align: center;
+    display: grid;
+}
+
 .gray{
     background-color: rgb(231, 231, 231);
     position: relative;
-    left: 350px;
-    top: -20px;
+    top: -16px;
     height: 160px;
     width: 1200px;
 }
 
 .bg{
-    
     width: 600px;
     height: 800px;
     position: relative;
-    top: -188px;
-    left: 650px;
+    top: -243px;
+    left: 300px;
 }
 .name1{
     font-size: 28px;
-    position: relative;
-    left: 750px;
+    position:relative;
     top: -160px;
+    left: -200px;
 }
 
 .name2{
     font-size: 22px;
     position: relative;
-    left: 750px;
-    top: -190px;
+    top: -180px;
+    left: -205px;
 }
 
+.name25{
+    font-size: 22px;
+    position: relative;
+    top: -200px;
+    left: -215px;
+}
 .name3{
     font-size: 22px;
     position: relative;
-    left: 790px;
-    top: -185px;
+    top: -210px;
+    left: -160px;
 }
 
 .name4{
-    font-size: 20px;
-    position: relative;
-    left: -150px;
-    top: -8px;
-    
+    font-size: 20px; 
+    height: 20px;
+    width: 250px;
+    margin: 0;
 }
 
 .name5{
     font-size: 18px;
     position: relative;
-    top: -850px;
-    left: 700px;
+    top: 20px;
+    left: -200px;
 }
 
 .name6{
     font-size: 18px;
     position: relative;
-    top: -888px;
-    left: 974px;
+    top: -17px;
+    left: 30px;
 }
 
 .name7{
     font-size: 18px;
     position: relative;
-    top: -790px;
-    left: 700px;
+    top: 50px;
+    left: -180px;
 }
 
 .name8{
     width: 250px;
     font-size: 18px;
+    margin: 0;
     position: relative;
-    top: -830px;
-    left: 700px;
-    border-bottom: 1px solid rgb(231, 231, 231);
+    top: 20px;
+    left: -30px;
 }
 
 .name9{
     font-size: 16px;
     position: relative;
-    top: -790px;
-    left: 855px;
+    top: 30px;
     color: red;
 }
 
 .img1{
     height: 20px;
     position: relative;
-    top: -50px;
-    left: 110px;
+    top: -1000px;
+    left: -55px;
 }
 
 .img2{
     height: 25px;
     position: relative;
-    top: -48px;
-    left: 120px;
+    left: -210px;
+    top: -997px;
 }
 
 .img3{
     height: 20px;
     position: relative;
-    top: -48px;
-    left: 155px;
+    top: -990px;
+    left: -100px;
 }
 
 .img4{
     height: 20px;
-    position: relative;
-    top: -871px;
-    left: 880px;
 }
 
 .img5{
     height: 200px;
     position: relative;
-    top: -790px;
-    left: 848px;
+    top: 20px;
+    left: 100px;
 }
 
 .wall{
     width: 550px;
-    height: 50px;
+    height: 60px;
     position: relative;
-    top: -935px;
-    left: 680px;
+    top: -1000px;
+    left: 76px;
     border: 0px;
     border-bottom: 1px solid rgb(231, 231, 231);
     background-color: rgb(255, 255, 255);
     cursor: pointer;
 }
-
-.wall1{
+.bt{
     width: 550px;
     height: 50px;
-    position: relative;
-    top: -885px;
-    left: 680px;
+}
+.wall1{
+    width: 550px;
+    height: 60px;
     border: 0px;
+    position: relative;
+    top: -990px;
+    left: 32px;
     border-bottom: 1px solid rgb(231, 231, 231);
     background-color: rgb(255, 255, 255);
     cursor: pointer;
@@ -147,29 +160,27 @@
     border: 0px;
     border-bottom: 1px solid rgb(231, 231, 231);
     position: relative;
-    top: -880px;
-    left: 680px;
+    left: -110px;
     font-size: 20px;
     cursor: pointer;
 }
 
 .box1{
     width: 210px;
-    height: 30px;
-    position: relative;
-    top: -930px;
-    left: 700px;
+    height: 40px;
     border: 0px;
     border-bottom: 1px solid rgb(231, 231, 231);
     background-color: rgb(255, 255, 255);
+    position: relative;
+    top: -65px;
+    left: -40px;
 }
 
 .box2{
     width: 210px;
-    height: 30px;
+    height: 40px;
     position: relative;
-    top: -930px;
-    left: 750px;
+    top: -65px;
     border: 0px;
     border-bottom: 1px solid rgb(231, 231, 231);
     background-color: rgb(255, 255, 255);
@@ -177,17 +188,52 @@
 
 .box3{
     width: 210px;
-    height: 30px;
-    position: relative;
-    top: -820px;
-    left: 700px;
+    height: 40px;
     border: 0px;
     border-bottom: 1px solid rgb(231, 231, 231);
     background-color: rgb(255, 255, 255);
+    position: relative;
+    left: -45px;
 }
 
 .forl{
     width: 600px;
     height: 350px;
+    position: relative;
+    top: -980px;
+    margin: auto;
 }
 
+.forl1{
+    width: 600px;
+    height: 350px;
+    position: relative;
+    top: -980px;
+    margin: auto;
+}
+
+.pom{
+    width: 100px;
+    position: relative;
+    top: 100px;
+    left: -105px;
+    height: 25px;
+    font-size: 18px;
+    color: rgb(255, 217, 0);
+    background-color: #ffffff;
+    border: #ffffff;
+    cursor: pointer;
+}
+
+.pom1{
+    width: 100px;
+    position: relative;
+    top: 100px;
+    left: -105px;
+    height: 25px;
+    font-size: 18px;
+    color: rgb(255, 217, 0);
+    background-color: #ffffff;
+    border: #ffffff;
+    cursor: pointer;
+}

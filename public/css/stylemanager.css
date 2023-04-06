@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Athiti:wght@300;400;500;700&display=swap');
+*{
+    font-family: 'Athiti', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+}
 body{
     background: url("../img/bggray.png") no-repeat 0 90%;
     height: 100%;
@@ -5,7 +11,6 @@ body{
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    display:grid;
 }
 .table{
     background-color: rgb(255, 255, 255);
@@ -25,6 +30,13 @@ body{
     border-color: #c4c4c4;    
     filter: drop-shadow(0px 0px 5px #c4c4c4);
     top: 50;
+    text-align-last: center;
+    overflow-y: auto;
+    text-align: center;
+
+
+  
+
 }
 .row{
     filter: drop-shadow(1px 1px 2px #707070);
@@ -44,4 +56,33 @@ body{
     position: fixed;
     right: 50;
     top: 5;
+}
+.name{
+    text-align: center;
+}
+.back{
+    position: relative;
+
+}
+@media screen and (max-width : 800px) {
+    .button img{
+        filter: drop-shadow(2px 2px 2px #707070);
+        position: relative;
+        left: 580;
+        top: 35px;
+    }
+}
+@media screen and (max-width : 300) {
+    .button img{
+        filter: drop-shadow(2px 2px 2px #707070);
+        position: relative;
+        left: 820;
+        top: 35px;
+    }
+    .row .pull-right{
+        position: relative;
+        right: 50;
+        top: 5;
+        width: 30;
+    }
 }
