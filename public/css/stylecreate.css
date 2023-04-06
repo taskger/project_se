@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Athiti:wght@300;400;500;700&display=swap');
+*{
+    font-family: 'Athiti', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+}
+body{
+    position: fixed;
+    top: 20;
+    background: url("../img/bggray.png") no-repeat 0 90%;
+    height: 100%;
+    width: 100% ;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.textbox{
+    position: relative;
+    left: 400  ;
+    bottom: 280;
+    align-items: center;
+}
+.textbox strong
+{
+    font-size: 55;
+}
+.bg{
+    filter: drop-shadow(2px 2px 2px #000000);
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    border-radius: 30px;
+    top: 20;
+    height: 25%;
+}
+.bg img{
+    position: relative;
+    left:70 ;
+    top: 20;
+}
+.row a{
+    position: relative;
+    right: 100;
+}
+@media screen and (max-width : 500px) {
+    .form-group button{
+        width: 300px;
+    }
+    .col-md-6 input{
+        width: 340px;
+        height: 50px;
+    }
+}

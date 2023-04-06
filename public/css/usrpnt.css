@@ -1,0 +1,19 @@
+.usr{
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+.usr td,#usr th{
+    border: 1px solid #ddd;
+    padding : 8px;
+}
+.usr tr:nth-child(even){
+    background-color: aqua;
+}
+.usr th{
+    padding-top : 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: green;
+    color: #fff;
+}

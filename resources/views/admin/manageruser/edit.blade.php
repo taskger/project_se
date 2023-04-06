@@ -1,10 +1,13 @@
 @extends('admin.manageruser.layout')
+<link rel="stylesheet" href="{{ asset('css/stylemanager.css')}}">
 
 @section('content')
 
-
-        <h2>Edit</h2>
-        <a href="{{ route('manageruser.index') }}" class="btn btn-primary my-3">Back</a>
+    <div class="pull-right">
+            <a href="{{ route('manageruser.index') }}" class="btn btn-primary my-3">Back</a>
+        </div>
+        <h2>แก้ไขข้อมูล</h2>
+        
 
 
     @if ($errors->any())
@@ -24,40 +27,44 @@
 
                 
                 <br>
-                <div><h1>ข้อมูลของ {{ $user->name }} {{ $user->surname }} </h1></div>
+                <div class="name">
+                    <h1>
+                    <img src="{{ asset('uploads/profiles/'.$user->profile_image) }}" width="100px" height="100px" alt="Image">    
+                    ข้อมูลของ {{ $user->name }} {{ $user->surname }} 
+                        
+                    </h1>
+                </div>
 
-                <div class="left">
-                    <br><strong>สถานะ {{ $user->role }}</strong><br>
-                </div>               
-                <select name="role" id="role" class="form-control" >
-                </select>
 
                 <div class="form-group mb-3">
-                    <label for="">Profile Image</label>
+                    <strong><label for="">อัพโหลดรูปโปรไฟล์</label></strong>
                     <input type="file" name="profile_image" class="form-control">
-                    <img src="{{ asset('uploads/profiles/'.$user->profile_image) }}" width="70px" height="70px" alt="Image">
                 </div>
                 <div class="left">
-                    <br><strong>ชื่อ</strong><br>
+                    <strong>ชื่อ</strong>
                     <input type="text" name="name" value="{{ $user->name }}" class="form-control"></input>
                 </div>
 
 
                 <div class="right">
-                    <strong>นามสกุล</strong><br>
+                    <strong>นามสกุล</strong>
                     <input type="text" name="surname" value="{{ $user->surname }}" class="form-control" ></input>
                 </div>
 
                 <div class="left">
-                    <strong>เบอร์</strong><br>
+                    <strong>เบอร์</strong>
                     <input type="text" name="telephone" value="{{ $user->telephone }}" class="form-control" ></input>
                 </div>
 
                 <div class="right">
-                    <strong>อีเมล</strong><br>
+                    <strong>อีเมล</strong>
                     <input type="text" name="email" value="{{ $user->email }}" class="form-control" ></input>
                 </div>
 
+                <div class="right">
+                    <strong>พาสเวิร์ด</strong><br>
+                    <input type="text" name="password" class="form-control" ></input>
+                </div>
                 <div class="submitcreate">
                     <button type="submit" class="btn btn-success my-3">Update</button>
                 </div>

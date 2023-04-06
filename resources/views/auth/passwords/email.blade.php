@@ -1,4 +1,5 @@
 @extends('layouts.app')
+<link rel="stylesheet" href="{{ asset('css/style.css')}}">
 
 @section('content')
 <div class="container">
@@ -37,6 +38,9 @@
                                     {{ __('Send Password Reset Link') }}
                                 </button>
                             </div>
+                        </div>
+                        <div class="Already">
+                            <p><a href="{{ route('login') }}">SIGN IN</a> </p>
                         </div>
                     </form>
                 </div>
