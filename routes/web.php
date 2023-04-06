@@ -7,6 +7,10 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\AddfileController;
 use App\Http\Controllers\FileUploadController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\studentController;
+
+
+
 
 
 /*
@@ -38,6 +42,7 @@ Route::resource('admin/contacts', ContactController::class);
 Route::get('admin/addfile', [AddfileController::class, 'addfile'])->name('addfile.index')->middleware('role');
 Route::get('file-upload', [FileUploadController::class, 'index'])->name('file-upload.index');
 Route::post('store', [FileUploadController::class, 'store']);
+
 
 
 
