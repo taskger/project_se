@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-5">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <title>ข้อมูลลูกค้าและการแก้ไข</title>
     <style>
         table, th, td {
