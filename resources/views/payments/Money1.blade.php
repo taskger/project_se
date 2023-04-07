@@ -47,50 +47,6 @@
                 <div class="forl1" id="spoiler1" style="display: none;">    
                     <h2 class="name8" >QR CODE</h2>
                     <button  class="pom">ย้อนกลับ</button>
-                    <div class="container">
-                        <form id="checkoutTrueWallet" method="POST" action="checkout.php">
-                            <input type="hidden" name="omiseToken">
-                            <input type="hidden" name="omiseSource">
-                            <input type="number" step="0.01" name="money">
-                            <button class="pom1" type="submit" id="checkoutButton">ชำระเงิน</button>
-                        </form>
-                    </div>
-                        <script type="text/javascript" src="https://cdn.omise.co/omise.js"></script>
-                        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
-                        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-                        <script>
-                            $(document).ready(function () {
-                                OmiseCard.configure({
-                                    publicKey: "pkey_test_5vcihnndgx1dnql6cce"
-                                });
-
-                                var button = document.querySelector("#checkoutButton");
-                                var form = document.querySelector("#checkoutTrueWallet");
-                                button.addEventListener("click", (event) => {
-                                    event.preventDefault();
-                                    const amount = parseFloat(document.getElementsByName('money')[0].value);
-                                    if (isNaN(amount)) {
-                                        return;
-                                    }
-
-                                    OmiseCard.open({
-                                    amount: parseInt(amount * 100), // จำนวนเงิน 300 ต้องระบุเป็น 30000 หรือ คูณด้วย 100
-                                        currency: "THB",
-                                        locale: "TH",
-                                        defaultPaymentMethod: "promptpay",
-                                        frameDescription: "EVCARE",
-                                        onCreateTokenSuccess: (nonce) => {
-                                            if (nonce.startsWith("tokn_")) {
-                                                form.omiseToken.value = nonce;
-                                            } else {
-                                                form.omiseSource.value = nonce;
-                                            };
-                                            form.submit();
-                                        }
-                                    });
-                                });
-                            });
-                        </script>
                 </div> <br />
         </div>
     </div>
