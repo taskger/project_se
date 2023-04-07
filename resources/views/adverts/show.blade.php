@@ -10,6 +10,5 @@
                <img src="{{ asset('uploads/img/'.$adverts->img_image) }}" width="1500" alt="Advert Image">
                 <td>{{ $adverts->text }}</td>
 
-
 </body>
 </html>

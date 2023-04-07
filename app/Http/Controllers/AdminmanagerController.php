@@ -46,12 +46,11 @@ class AdminmanagerController extends Controller
     public function store(Request $request,User $user)
     {
         $request->validate([
-            'role' => 'required',
-            'name' => 'required',
-            'surname' => 'required',
-            'email' => 'required',
-            'telephone' => 'required',
-            'password' => 'required',
+            'name' => ['required', 'string', 'max:255'],
+            'surname' => ['xrequired', 'string', 'max:255'],
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'telephone' => ['required', 'numeric', 'digits:10']
         ]);
         if($request->hasfile('profile_image'))
         {
@@ -96,11 +95,11 @@ class AdminmanagerController extends Controller
     public function update(Request $request, $user_id)
     {
         $request->validate([
-            'name' => 'required',
-            'surname' => 'required',
-            'email' => 'required',
-            'telephone' => 'required',
-
+            'name' => ['required', 'string', 'max:255'],
+            'surname' => ['required', 'string', 'max:255'],
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'telephone' => ['required', 'numeric', 'digits:10'],
         ]);
         $user = User::find($user_id);
         if($request->hasfile('profile_image'))
