@@ -9,14 +9,14 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
-    public function up()
+    public function up(): void
     {
-    Schema::create('files', function (Blueprint $table) {
-        $table->id();
-        $table->string('name');
-        $table->string('path');
-        $table->timestamps();
-    });
+        Schema::create('plans', function (Blueprint $table) {
+            $table->id();
+            $table->string('plancar')->nullable();
+            $table->string('car-insurance')->default('')->nullable();
+
+        });
     }
 
     /**
@@ -24,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('files');
+        Schema::dropIfExists('plans');
     }
 };

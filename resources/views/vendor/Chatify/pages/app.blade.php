@@ -64,6 +64,7 @@
                 <nav class="m-header-right">
                     <a href="#" class="add-to-favorite"><i class="fas fa-star"></i></a>
                     <a href="{{ route('admin.home') }}"><i class="fas fa-home"></i></a>
+                    <a href="{{ route('Axamain.index') }}"><i class="fas fa-arrow-left"></i></a>
                     <!-- <a href="#" class="show-infoSide"><i class="fas fa-info-circle"></i></a> -->
                 </nav>
             </nav>
