@@ -20,6 +20,7 @@ use App\Http\Controllers\FileUploadController3;
 use App\Http\Controllers\FileUploadController4;
 use App\Http\Controllers\PrintController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\PhotosController;
 
 Route::get('checkcay',[Checkcay::class, 'checkcay'])->name('checkcay.index');
 Route::resource('payments',Checkpaycon::class);
@@ -66,7 +67,7 @@ Route::post('store', [FileUploadController::class, 'store']);
 Route::get('axa', [AxaController::class, 'index'])->name('file-upload.index');
 Route::get('Axamain', [AxaController::class, 'inout'])->name('Axamain.index');
 Route::get('admin/print', [PrintController::class, 'getAllUserdata'])->name('print.index')->middleware('role');
-Route::get('admin/print/download-pdf',[PrintController::class,'downloadPDF']);
+// Route::get('admin/print/download-pdf',[PrintController::class,'downloadPDF']);
 Route::resource('adverts', Advertscontroller::class);
 Route::get('profile', [ProfileController::class, 'getAllUserdata'])->name('profile.index');
 
@@ -78,9 +79,15 @@ Route::get('file-upload4', [FileUploadController4::class, 'index'])->name('file-
 Route::post('store', [FileUploadController4::class, 'store']);
 
 
+Route::get('photos','App\Http\Controllers\PhotosController@view')->name('photos');
+Route::post('photos/store','App\Http\Controllers\PhotosController@store')->name('photos/store');
+Route::get('photos2','App\Http\Controllers\PhotosController@view2')->name('photos2');
+Route::post('photos/store','App\Http\Controllers\PhotosController@store')->name('photos/store');
+Route::get('photos3','App\Http\Controllers\PhotosController@view3')->name('photos3');
+Route::post('photos/store','App\Http\Controllers\PhotosController@store')->name('photos/store');
+Route::get('photos4','App\Http\Controllers\PhotosController@view4')->name('photos4');
+Route::post('photos/store','App\Http\Controllers\PhotosController@store')->name('photos/store');
 
 /*Employee*/
 Route::get('employee/home', [HomeController::class, 'employeeHome'])->name('employee.home')->middleware('roleStaff');
-
- 
 Route::resource('posts', PostController::class);
