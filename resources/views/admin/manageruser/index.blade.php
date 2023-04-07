@@ -44,8 +44,8 @@
         <tr>
             <th>ชื่อ</th>
             <th>นามสกุล</th>
-            <textarea disabled>เบอร์โทรศัพท์</textarea>
-            <textarea disabled>อีเมล์</textarea>
+            <th>เบอร์โทรศัพท์</th>
+            <th>อีเมล์</th>
             <th width="180px">Action</th>
         </tr>
 

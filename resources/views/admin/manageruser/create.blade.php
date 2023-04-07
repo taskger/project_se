@@ -57,7 +57,7 @@
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <input class="form-control" name="email" placeholder="อีเมล์"></input>
+                    <input class="form-control" type="email" name="email" placeholder="อีเมล์"></input>
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
@@ -70,6 +70,7 @@
                     <input class="form-control" name="password" placeholder="รหัสผ่าน"></input>
                 </div>
             </div>
+
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">
                     <button type="submit" class="btn btn-primary">Submit</button>
             </div>
