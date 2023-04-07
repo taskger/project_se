@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="{{ asset('css/select.css')}}">
     <title>test</title>
 </head>
-
 <body>
 <ul>
   <li><a href="#home">Jiramet@ku.th</a></li>
@@ -15,6 +14,7 @@
   <li><a href="#contact">Contact</a></li>
   <li style="float:right"><a class="active" href="#about">Home</a></li>
 </ul>
+<h3 class = "main">ความรับผิดชอบ</h3>
 </nav>
 </body>
 </html>
