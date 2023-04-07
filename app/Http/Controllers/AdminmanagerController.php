@@ -5,6 +5,7 @@ use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
+use App\Models\Contact;
 
 
 class AdminmanagerController extends Controller
@@ -15,6 +16,7 @@ class AdminmanagerController extends Controller
     public function index()
     {
             $users = User::where('role', 'user')->get();
+
             return view('admin.manageruser.index',compact('users'));
     }
 
@@ -64,7 +66,7 @@ class AdminmanagerController extends Controller
         $user->surname = $request->surname;
         $user->email = $request->email;
         $user->telephone = $request->telephone;
-        $user->password = Hash::make($request->password);
+        $user->password = $request->password;
         $user->save();
         return redirect()->route('manageruser.index')
                     ->with('success','User created successfully.');
@@ -85,6 +87,7 @@ class AdminmanagerController extends Controller
     public function edit($user_id)
     {
         $user = User::find($user_id);
+
         return view('admin.manageruser.edit', compact('user'));
     }
     /**
@@ -117,7 +120,7 @@ class AdminmanagerController extends Controller
         $user->surname = $request->surname;
         $user->email = $request->email;
         $user->telephone = $request->telephone;
-        $user->password = Hash::make($request->password);
+        $user->password = $request->password;
         $user->update();
         return redirect()->route('manageruser.index', ['User' => $user])
                         ->with('success','User updated successfully');

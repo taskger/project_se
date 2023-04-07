@@ -36,6 +36,10 @@ return new class extends Migration
             $table->string('registrationprovince');
             $table->string('chassisnumber');
             $table->string('carpaint');
+            $table->string('amount')->nullable();
+            $table->string('insurance')->nullable();
+            $table->string('plane')->nullable();
+            $table->integer('user_id')->nullable();
             $table->timestamps();
         });
     }

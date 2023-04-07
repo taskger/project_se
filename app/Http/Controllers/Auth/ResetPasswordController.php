@@ -26,9 +26,10 @@ class ResetPasswordController extends Controller
 
     protected function resetPassword($user, $password)
     {
+        $user->password = null;
         $user->forceFill([
             'password' => $password,
-            'remember_token' => str_random(60),
+            'remember_token' => Str::random(60),
         ])->save();
     
         $this->guard()->login($user);

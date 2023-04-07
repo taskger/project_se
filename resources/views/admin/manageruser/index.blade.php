@@ -14,8 +14,10 @@
 <div class="row">
         
         <div class="col-lg-12 margin-tb">
-            <div class="pull-left">
-                <h2>ระบบจัดการสมาชิก</h2>
+        <div class="pull-left">
+            <a href="{{ route('employee.home') }}" class="back">
+                <img width="40px" class="plus_icon" src="{{URL::asset('/img/arrow-back-8.png')}}">
+            </a> ระบบจัดการสมาชิก</h2>
             </div>
 
             <div class="pull-right">
@@ -42,8 +44,8 @@
         <tr>
             <th>ชื่อ</th>
             <th>นามสกุล</th>
-            <th>เบอร์โทรศัพท์</th>
-            <th>อีเมล์</th>
+            <textarea disabled>เบอร์โทรศัพท์</textarea>
+            <textarea disabled>อีเมล์</textarea>
             <th width="180px">Action</th>
         </tr>
 
