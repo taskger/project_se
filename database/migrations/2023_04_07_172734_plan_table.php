@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('plancar')->nullable();
             $table->string('car-insurance')->default('')->nullable();
+            $table->string('number')->default('')->nullable();
         });
     }
 
