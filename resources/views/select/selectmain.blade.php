@@ -14,7 +14,6 @@
   <li><a href="#contact">Contact</a></li>
   <li style="float:right"><a class="active" href="#about">Home</a></li>
 </ul>
-<h3 class = "main">ความรับผิดชอบต่อบุคคลภายนอก</h3>
 </nav>
 </body>
 </html>
