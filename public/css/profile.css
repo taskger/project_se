@@ -1,0 +1,46 @@
+.home{
+    background-color: greenyellow;
+    text-align: center;
+    padding: 15px;
+    font-size: 30px;
+}
+
+.home{
+    color: black;
+    background-color: greenyellow;
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    margin-bottom: 20px;
+    display:block;
+    width: 210vh;
+}
+
+.home::before{
+    content:" ";
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background: url("lookkrub.png")no-repeat;
+    background-size:contain;
+    float:left;
+}
+
+.private{
+    text-align: center;
+}
+.name{
+    text-align: center;
+}
+.gen{
+    text-align: center;
+}
+.accout{
+    text-align: center;
+}
+.mail{
+    text-align: center;
+}
+.tel{
+    text-align: center;
+}
