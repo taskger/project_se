@@ -45,7 +45,13 @@
                     {{ Auth::user()->role }}
 
                     <br>
-                    
+                    <a class="btn btn-info" href="{{ route('manageruser.index') }}">ข้อมูล ACCOUNT</a>
+                    <br>
+                    <br>
+                    <a class="btn btn-info" href="{{ route('contacts.index') }}">ข้อมูลลูกค้า</a>
+                    <a class="btn btn-info" href="{{ route('file-upload.index') }}">File-Upload</a>
+                    <a class="btn brn-info" href="{{ route('payments.index')}}">Check Payment</a>
+                    <a class="btn btn-info" href="{{ route('chatify') }}">chat</a>
                     
                 </div>
             </div>
