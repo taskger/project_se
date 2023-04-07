@@ -56,5 +56,6 @@
 <h4 class = "blue">&ensp;&ensp;&ensp;กล้องติดรถยนต์</h4>
 <h4 class = "gray">&ensp;&ensp;&ensp;- บาท</h4>
 
+</nav>
 </body>
 </html>

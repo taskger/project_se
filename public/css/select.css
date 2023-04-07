@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .blue{
   background-color: #23d7f7;
   margin-top: -20px;
@@ -5,4 +6,56 @@
 .gray{
   background-color: #D3D3D3;
   margin-top: -20px;
+=======
+li {
+    display: inline;
+  }
+  li {
+    float: left;
+  }
+  
+  a {
+    display: block;
+    padding: 8px;
+    background-color: #333;
+  }
+  ul {
+    background-color: #333;
+  }
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  /* Change the link color to #111 (black) on hover */
+  li a:hover {
+    background-color: #111;
+  }
+  .active {
+    background-color: #04AA6D;
+  }
+  ul {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+.main{
+  margin-top: 70px;
+  
+>>>>>>> 858924ecd05d3478a29d2173d4736b99cf94e968
 }
