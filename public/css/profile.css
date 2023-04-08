@@ -2,18 +2,8 @@
     background-color: greenyellow;
     text-align: center;
     padding: 15px;
-    font-size: 30px;
-}
-
-.home{
-    color: black;
-    background-color: greenyellow;
-    padding: 15px;
-    text-align: center;
-    text-decoration: none;
-    margin-bottom: 20px;
     display:block;
-    width: 210vh;
+    font-size: 30px;
 }
 
 .home::before{
@@ -25,6 +15,7 @@
     background-size:contain;
     float:left;
 }
+
 
 .private{
     text-align: center;

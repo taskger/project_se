@@ -116,16 +116,6 @@ body{
     left: -100px;
 }
 
-.img4{
-    height: 20px;
-}
-
-.img5{
-    height: 200px;
-    position: relative;
-    top: 20px;
-    left: 100px;
-}
 
 .wall{
     width: 550px;
@@ -138,10 +128,12 @@ body{
     background-color: rgb(255, 255, 255);
     cursor: pointer;
 }
+
 .bt{
     width: 550px;
     height: 50px;
 }
+
 .wall1{
     width: 550px;
     height: 60px;
@@ -165,35 +157,10 @@ body{
     cursor: pointer;
 }
 
-.box1{
-    width: 210px;
-    height: 40px;
-    border: 0px;
-    border-bottom: 1px solid rgb(231, 231, 231);
-    background-color: rgb(255, 255, 255);
+.price{
+    font-size: 30px;
     position: relative;
-    top: -65px;
-    left: -40px;
-}
-
-.box2{
-    width: 210px;
-    height: 40px;
-    position: relative;
-    top: -65px;
-    border: 0px;
-    border-bottom: 1px solid rgb(231, 231, 231);
-    background-color: rgb(255, 255, 255);
-}
-
-.box3{
-    width: 210px;
-    height: 40px;
-    border: 0px;
-    border-bottom: 1px solid rgb(231, 231, 231);
-    background-color: rgb(255, 255, 255);
-    position: relative;
-    left: -75px;
+    top: 50px;
 }
 
 .forl{
@@ -216,7 +183,7 @@ body{
     width: 100px;
     position: relative;
     top: 100px;
-    left: -105px;
+    left: -35px;
     height: 25px;
     font-size: 18px;
     color: rgb(255, 217, 0);
@@ -229,7 +196,33 @@ body{
     width: 100px;
     position: relative;
     top: 100px;
-    left: -105px;
+    left: -35px;
+    height: 25px;
+    font-size: 18px;
+    color: rgb(255, 217, 0);
+    background-color: #ffffff;
+    border: #ffffff;
+    cursor: pointer;
+}
+
+.pom2{
+    width: 100px;
+    position: relative;
+    top: 100px;
+    left: -125px;
+    height: 25px;
+    font-size: 18px;
+    color: rgb(255, 217, 0);
+    background-color: #ffffff;
+    border: #ffffff;
+    cursor: pointer;
+}
+
+.pom3{
+    width: 100px;
+    position: relative;
+    top: 100px;
+    left: -125px;
     height: 25px;
     font-size: 18px;
     color: rgb(255, 217, 0);
@@ -242,4 +235,9 @@ body{
     position: relative;
     left: -910px;
     top: 20px;
+}
+
+.form-control{
+    position: relative;
+    top: 10px;
 }

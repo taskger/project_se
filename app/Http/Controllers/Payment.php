@@ -22,4 +22,5 @@ class Payment extends Controller
         $price = prices::all();
         return view('payments.Money1',compact('price'));
     }
+
 }
