@@ -69,7 +69,7 @@ Route::get('admin/addfile', [AddfileController::class, 'addfile'])->name('addfil
 Route::get('axa', [AxaController::class, 'index'])->name('file-upload.index');
 Route::get('Axamain', [AxaController::class, 'inout'])->name('Axamain.index');
 Route::get('admin/print', [PrintController::class, 'getAllUserdata'])->name('print.index')->middleware('role');
-// Route::get('admin/print/download-pdf',[PrintController::class,'downloadPDF']);
+
 Route::resource('adverts', Advertscontroller::class);
 Route::get('profile', [ProfileController::class, 'getAllUserdata'])->name('profile.index');
 
