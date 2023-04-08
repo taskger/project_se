@@ -23,7 +23,7 @@ class PhotosController extends Controller
   }
 
   public function store(Request $req){
-    $usr = Auth::user('name');
+    $usr = Auth::user();
     $req->validate([
       'imageFile' => 'required',
       'imageFile.*' => 'mimes:jpeg,jpg,png,pdf|max:5120'
@@ -40,7 +40,7 @@ class PhotosController extends Controller
         $fileModal = new Image();
         $fileModal->name = json_encode($imgData);
         $fileModal->image_path = json_encode($imgData);
-        $fileModal->user = $usr;
+        $fileModal->user = $usr->name;
         
        
         $fileModal->save();
