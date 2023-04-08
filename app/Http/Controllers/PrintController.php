@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Contact;
-use PDF;
+use \Mpdf\Mpdf as PDF;
 
 class PrintController extends Controller
 {
@@ -18,5 +18,6 @@ class PrintController extends Controller
         $userdatas = Contact::all();
         $pdf = PDF::loadView('admin.Print.print',compact('userdatas'));
         return $pdf->download('Userdata.pdf');
+
     }
 }

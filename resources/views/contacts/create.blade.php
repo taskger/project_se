@@ -3,7 +3,7 @@
 @section('content')
 
 
-    <a href="{{ url()->previous() }}" class="btn btn-primary my-3">Back</a>
+    <a href="{{ url()->previous() }}" class="btn btn-primary my-3 mr-5">Back</a>
 
 
     @if ($errors->any())
@@ -251,7 +251,7 @@
                 </div>
             
                 <div class="submitcreate">
-                    <br><button type="submit" >Submit</button>
+                    <br><button type="submit" class = "btn btn-success w-50 p-3 h-30 d-inline-block" >Suscess</button>
                 </div>
                 
 

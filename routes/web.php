@@ -65,21 +65,13 @@ Route::put('contacts/{contact}', [ContactController::class, 'update'])->name('co
 Route::delete('contacts/{contact}', [ContactController::class, 'destroy'])->name('contacts.destroy')->middleware('roleStaff');
 Route::resource('admin/contacts', ContactController::class);       
 Route::get('admin/addfile', [AddfileController::class, 'addfile'])->name('addfile.index')->middleware('role');
-Route::get('file-upload', [FileUploadController::class, 'index'])->name('file-upload.index');
-Route::post('store', [FileUploadController::class, 'store']);
+
 Route::get('axa', [AxaController::class, 'index'])->name('file-upload.index');
 Route::get('Axamain', [AxaController::class, 'inout'])->name('Axamain.index');
 Route::get('admin/print', [PrintController::class, 'getAllUserdata'])->name('print.index')->middleware('role');
 // Route::get('admin/print/download-pdf',[PrintController::class,'downloadPDF']);
 Route::resource('adverts', Advertscontroller::class);
 Route::get('profile', [ProfileController::class, 'getAllUserdata'])->name('profile.index');
-
-Route::get('file-upload2', [FileUploadController2::class, 'index'])->name('file-upload2.index');
-Route::post('store', [FileUploadController2::class, 'store']);
-Route::get('file-upload3', [FileUploadController3::class, 'index'])->name('file-upload3.index');
-Route::post('store', [FileUploadController3::class, 'store']);
-Route::get('file-upload4', [FileUploadController4::class, 'index'])->name('file-upload4.index');
-Route::post('store', [FileUploadController4::class, 'store']);
 
 
 Route::get('photos','App\Http\Controllers\PhotosController@view')->name('photos');
