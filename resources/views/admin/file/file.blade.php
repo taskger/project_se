@@ -24,7 +24,7 @@
 </head>
 
 <body>
-        <a href="{{route('photos')}}" class = "btn btn-info mt-1 ml-1">
+        <a href="{{route('home')}}" class = "btn btn-info mt-1 ml-1">
             back
         </a>
     <div class="container mt-5">
