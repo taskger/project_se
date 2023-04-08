@@ -80,5 +80,10 @@ class advertscontroller extends Controller
         $adverts->delete();
         return redirect()->route('adverts.index')->with('success', 'adverts has been delete successfully.');
     }
+    public function welcome(){
+        $data['Adverts'] = Adverts:: orderby('id', 'asc')->paginate(5);
+        return view('welcome', $data);
+    }
+
  }
 

@@ -39,6 +39,9 @@
                         </tr>
                     @endforeach
                 </table>
+                <div>
+                    <a href="{{ url()->previous() }}" class="btn btn-success">back</a> 
+                </div>
             </div>
         </div>
     

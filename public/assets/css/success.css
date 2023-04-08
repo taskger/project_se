@@ -1,0 +1,22 @@
+body{
+    height: auto;
+    width: auto ;
+    display:grid;
+    align-items: center;
+    justify-content: center;
+    margin: 0; 
+    text-align: center;
+    display: grid;
+}
+
+.im{
+    font-size: 25px;
+    position: relative;
+    top: 400px;
+}
+
+.btn {
+    position: relative;
+    left: -920px;
+    top: 20px;
+}

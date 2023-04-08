@@ -20,10 +20,14 @@ use App\Http\Controllers\FileUploadController3;
 use App\Http\Controllers\FileUploadController4;
 use App\Http\Controllers\PrintController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\PhotosController;
 
 Route::get('checkcay',[Checkcay::class, 'checkcay'])->name('checkcay.index');
 Route::resource('payments',Checkpaycon::class);
 Route::get('Money1',[Payment::class,'payment'])->name('Money1.index');
+Route::get('success',[Payment::class,'successc'])->name('success.index');
+Route::get('back',[Payment::class,'backs'])->name('homes.index');
+Route::get('Money1', [Payment::class,'prices'])->name('Money1.index');
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -35,9 +39,9 @@ Route::get('Money1',[Payment::class,'payment'])->name('Money1.index');
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+Route::get('/', [Advertscontroller::class, 'welcome'])->name('welcome');
+
 
 Auth::routes();
 
@@ -61,26 +65,24 @@ Route::put('contacts/{contact}', [ContactController::class, 'update'])->name('co
 Route::delete('contacts/{contact}', [ContactController::class, 'destroy'])->name('contacts.destroy')->middleware('roleStaff');
 Route::resource('admin/contacts', ContactController::class);       
 Route::get('admin/addfile', [AddfileController::class, 'addfile'])->name('addfile.index')->middleware('role');
-Route::get('file-upload', [FileUploadController::class, 'index'])->name('file-upload.index');
-Route::post('store', [FileUploadController::class, 'store']);
+
 Route::get('axa', [AxaController::class, 'index'])->name('file-upload.index');
 Route::get('Axamain', [AxaController::class, 'inout'])->name('Axamain.index');
 Route::get('admin/print', [PrintController::class, 'getAllUserdata'])->name('print.index')->middleware('role');
-Route::get('admin/print/download-pdf',[PrintController::class,'downloadPDF']);
+
 Route::resource('adverts', Advertscontroller::class);
 Route::get('profile', [ProfileController::class, 'getAllUserdata'])->name('profile.index');
 
-Route::get('file-upload2', [FileUploadController2::class, 'index'])->name('file-upload2.index');
-Route::post('store', [FileUploadController2::class, 'store']);
-Route::get('file-upload3', [FileUploadController3::class, 'index'])->name('file-upload3.index');
-Route::post('store', [FileUploadController3::class, 'store']);
-Route::get('file-upload4', [FileUploadController4::class, 'index'])->name('file-upload4.index');
-Route::post('store', [FileUploadController4::class, 'store']);
 
-
+Route::get('photos','App\Http\Controllers\PhotosController@view')->name('photos');
+Route::post('photos/store','App\Http\Controllers\PhotosController@store')->name('photos/store');
+Route::get('photos2','App\Http\Controllers\PhotosController@view2')->name('photos2');
+Route::post('photos/store','App\Http\Controllers\PhotosController@store')->name('photos/store');
+Route::get('photos3','App\Http\Controllers\PhotosController@view3')->name('photos3');
+Route::post('photos/store','App\Http\Controllers\PhotosController@store')->name('photos/store');
+Route::get('photos4','App\Http\Controllers\PhotosController@view4')->name('photos4');
+Route::post('photos/store','App\Http\Controllers\PhotosController@store')->name('photos/store');
 
 /*Employee*/
 Route::get('employee/home', [HomeController::class, 'employeeHome'])->name('employee.home')->middleware('roleStaff');
-
- 
 Route::resource('posts', PostController::class);

@@ -19,6 +19,8 @@
                 <a class="btn btn-primary" href="http://127.0.0.1:8000/adverts" > แนะนำการเลือกประกัน </a>
                 <a class="btn btn-secondary" href="http://127.0.0.1:8000/file-upload"> ต่อประกันรถยนต์</a>
                 <a class="btn btn-warning" href="http://127.0.0.1:8000/posts"> เช็คสถานะรถ</a>
+                <a class="btn btn-dark" href="http://127.0.0.1:8000/profile"> profile</a>
+
                 </h2>
             </div>
 

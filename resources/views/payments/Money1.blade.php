@@ -9,6 +9,9 @@
     <title>คิดเงิน</title>
 </head>
 <body>
+    <a href="{{ route('homes.index') }}" class="btn btn-link">
+        <img width="40px" class="plus_icon" src="{{URL::asset('/img/arrow-back-8.png')}}">
+    </a>
     <div class="on">
         <p class="gray"></p>
         <h2 class="name1">AXA</h2>
@@ -31,14 +34,14 @@
                         <option value="line">Line pay</option>
                     </select>
                 </form>
-                <h2 class="name5">ชื่อผู้ชำระเงิน</h2>
-                <h2 class="name6">อีเมล</h2>
-                <h2 class="name7">หมายเลขโทรศัพท์</h2>
                 <input class="box1" type="text">
                 <input class="box2" type="email">
-                <input class="box3" type="number">
-                <button class="pom">ย้อนกลับ</button> 
-                <button class="pom1">ชำระ</button>
+                <!-- @foreach($price as $pr)
+                <td>{{$pr->price1}}</td>
+                @endforeach -->
+                <input class="box3" value="{{$pr->price1}}" type="text"></input>
+                <button class="pom">ย้อนกลับ</button>
+                <a href= "{{ route('success.index')}}" class="pom1">ชำระ</a>
             </div> <br />
             <button class="wall1" onclick="if(document.getElementById('spoiler1') .style.display=='none') {document.getElementById('spoiler1') .style.display=''}else{document.getElementById('spoiler1') .style.display='none'}" title="Click to show/hide" type="button">
                 <h2 class="name4">ชำระเงินโดยแสกน QR</h2>
@@ -47,50 +50,7 @@
                 <div class="forl1" id="spoiler1" style="display: none;">    
                     <h2 class="name8" >QR CODE</h2>
                     <button  class="pom">ย้อนกลับ</button>
-                    <div class="container">
-                        <form id="checkoutTrueWallet" method="POST" action="checkout.php">
-                            <input type="hidden" name="omiseToken">
-                            <input type="hidden" name="omiseSource">
-                            <input type="number" step="0.01" name="money">
-                            <button class="pom1" type="submit" id="checkoutButton">ชำระเงิน</button>
-                        </form>
-                    </div>
-                        <script type="text/javascript" src="https://cdn.omise.co/omise.js"></script>
-                        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
-                        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-                        <script>
-                            $(document).ready(function () {
-                                OmiseCard.configure({
-                                    publicKey: "pkey_test_5vcihnndgx1dnql6cce"
-                                });
-
-                                var button = document.querySelector("#checkoutButton");
-                                var form = document.querySelector("#checkoutTrueWallet");
-                                button.addEventListener("click", (event) => {
-                                    event.preventDefault();
-                                    const amount = parseFloat(document.getElementsByName('money')[0].value);
-                                    if (isNaN(amount)) {
-                                        return;
-                                    }
-
-                                    OmiseCard.open({
-                                    amount: parseInt(amount * 100), // จำนวนเงิน 300 ต้องระบุเป็น 30000 หรือ คูณด้วย 100
-                                        currency: "THB",
-                                        locale: "TH",
-                                        defaultPaymentMethod: "promptpay",
-                                        frameDescription: "EVCARE",
-                                        onCreateTokenSuccess: (nonce) => {
-                                            if (nonce.startsWith("tokn_")) {
-                                                form.omiseToken.value = nonce;
-                                            } else {
-                                                form.omiseSource.value = nonce;
-                                            };
-                                            form.submit();
-                                        }
-                                    });
-                                });
-                            });
-                        </script>
+                    <a href= "{{ route('success.index')}}" class="pom1">ชำระ</a>
                 </div> <br />
         </div>
     </div>
