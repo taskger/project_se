@@ -55,7 +55,9 @@ Route::get('admin/adminmanager', [AdminmanagerController::class, 'adminmanager']
 Route::get('admin/employeemanager', [AdminmanagerController::class, 'employeemanager'])->name('manageruser.employeemanager')->middleware('role');        
 Route::resource('admin/contacts', ContactController::class)->middleware('role');
 Route::resource('admin/contacts', ContactController::class);       
-Route::get('selectmain', [SelectController::class, 'index'])->name('selectmain');
+Route::get('selectmains', [SelectController::class, 'index'])->name('selectmain');
+Route::post('selectmain', [SelectController::class, 'store'])->name('selectmain.store')->middleware('roleUser');
+Route::resource('admin/selectmain', SelectController::class);       
 Route::get('contacts', [ContactController::class, 'index'])->name('contacts.index')->middleware('roleStaff');
 Route::get('contacts/create', [ContactController::class, 'create'])->name('contacts.create')->middleware('roleUser');
 Route::post('contacts', [ContactController::class, 'store'])->name('contacts.store')->middleware('roleUser');

@@ -34,7 +34,11 @@
                   <option value="400000">400,000</option>
                   <option value="600000">600,000</option>
               </select>
+              <div class="submitcreate">
+                    <br><button type="submit" class = "btn btn-success w-50 p-3 h-30 d-inline-block" >Suscess</button>
+                </div>
           </div>
+          
 <br><br>
 <h4 class = "blue">&ensp;&ensp;&ensp;ความรับผิดชอบต่อบุคคลภายนอก</h4>
 <h4 class = "gray">&ensp;&ensp;&ensp;ความเสียหายต่อชีวิต ร่างกายหรืออนามัยเฉพาะส่วนเกิน พ.ร.บ/คน</h4> 

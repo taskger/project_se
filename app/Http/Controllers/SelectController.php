@@ -11,14 +11,18 @@ class SelectController extends Controller
     {
         return view('select.selectmain');
     }
-    public function store(Request $request,Plan $plan)
+    public function store(Request $request,plans $plan)
     {
         $request->validate([
-            'Plan' => 'required',
+            'Plancar' => 'required',
             'car-insurance' => 'required'
         ],[
-            'Plan.required' => "กรุณาเลือกแผนประกันของท่านด้วย",
-            'car-insurance' => "กรุณาเลือกทุนประกันรถของท่านด้วย" 
+            'Plancar.required' => "กรุณาเลือกแผนประกันของท่านด้วย",
+            'car-insurance.required' => "กรุณาเลือกทุนประกันรถของท่านด้วย" 
         ]);
+        plans::create($request->all());
+         redirect()->route('selectmain')
+                ->with('success', 'User create successfully.');
+            return view('contacts.create');
     }
 }
