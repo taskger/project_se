@@ -9,6 +9,9 @@
     <title>คิดเงิน</title>
 </head>
 <body>
+    <a href="{{ route('homes.index') }}" class="btn btn-link">
+        <img width="40px" class="plus_icon" src="{{URL::asset('/img/arrow-back-8.png')}}">
+    </a>
     <div class="on">
         <p class="gray"></p>
         <h2 class="name1">AXA</h2>
@@ -31,14 +34,12 @@
                         <option value="line">Line pay</option>
                     </select>
                 </form>
-                <h2 class="name5">ชื่อผู้ชำระเงิน</h2>
-                <h2 class="name6">อีเมล</h2>
-                <h2 class="name7">หมายเลขโทรศัพท์</h2>
                 <input class="box1" type="text">
                 <input class="box2" type="email">
-                <input class="box3" type="number">
-                <button class="pom">ย้อนกลับ</button> 
-                <button class="pom1">ชำระ</button>
+                <td>{{$price->price1}}</td>
+                <!-- <input class="box3" value="{{$price->price1}}" type="text"></input> -->
+                <button class="pom">ย้อนกลับ</button>
+                <a href= "{{ route('success.index')}}" class="pom1">ชำระ</a>
             </div> <br />
             <button class="wall1" onclick="if(document.getElementById('spoiler1') .style.display=='none') {document.getElementById('spoiler1') .style.display=''}else{document.getElementById('spoiler1') .style.display='none'}" title="Click to show/hide" type="button">
                 <h2 class="name4">ชำระเงินโดยแสกน QR</h2>
@@ -47,6 +48,7 @@
                 <div class="forl1" id="spoiler1" style="display: none;">    
                     <h2 class="name8" >QR CODE</h2>
                     <button  class="pom">ย้อนกลับ</button>
+                    <a href= "{{ route('success.index')}}" class="pom1">ชำระ</a>
                 </div> <br />
         </div>
     </div>
