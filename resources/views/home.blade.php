@@ -9,6 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>home</title>
+    <link rel="stylesheet" href="{{ asset('css/home.css')}}">
 </head>
 <body>
 <div class="row">
@@ -17,7 +18,7 @@
             <div class="pull-left">
                 <h2>EVCARE
                 <a class="btn btn-primary" href="http://127.0.0.1:8000/adverts" > แนะนำการเลือกประกัน </a>
-                <a class="btn btn-secondary" href="http://127.0.0.1:8000/file-upload"> ต่อประกันรถยนต์</a>
+                <a class="btn btn-secondary" href="http://127.0.0.1:8000/photos"> ต่อประกันรถยนต์</a>
                 <a class="btn btn-warning" href="http://127.0.0.1:8000/posts"> เช็คสถานะรถ</a>
                 <a class="btn btn-dark" href="http://127.0.0.1:8000/profile"> profile</a>
 
