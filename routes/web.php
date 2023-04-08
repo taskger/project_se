@@ -25,6 +25,9 @@ use App\Http\Controllers\PhotosController;
 Route::get('checkcay',[Checkcay::class, 'checkcay'])->name('checkcay.index');
 Route::resource('payments',Checkpaycon::class);
 Route::get('Money1',[Payment::class,'payment'])->name('Money1.index');
+Route::get('success',[Payment::class,'successc'])->name('success.index');
+Route::get('back',[Payment::class,'backs'])->name('homes.index');
+Route::get('Money1', [Payment::class,'prices'])->name('Money1.index');
 /*
 |--------------------------------------------------------------------------
 | Web Routes
