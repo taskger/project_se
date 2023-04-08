@@ -36,8 +36,10 @@
                 </form>
                 <input class="box1" type="text">
                 <input class="box2" type="email">
-                <td>{{$price->price1}}</td>
-                <!-- <input class="box3" value="{{$price->price1}}" type="text"></input> -->
+                <!-- @foreach($price as $pr)
+                <td>{{$pr->price1}}</td>
+                @endforeach -->
+                <input class="box3" value="{{$pr->price1}}" type="text"></input>
                 <button class="pom">ย้อนกลับ</button>
                 <a href= "{{ route('success.index')}}" class="pom1">ชำระ</a>
             </div> <br />
