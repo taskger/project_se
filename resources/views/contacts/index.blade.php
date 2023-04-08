@@ -2,7 +2,7 @@
 
 
 @section('content')
-<link rel="stylesheet" href="{{ asset('css/datauser.css')}}">
+<!-- <link rel="stylesheet" href="{{ asset('css/datauser.css')}}"> -->
     <div class="row mt-5">
         <div class="col-md-12">
         <h2 class = "name">ข้อมูลลูกค้าและการแก้ไข</h2>
@@ -50,8 +50,8 @@
                 <td>
                     <form action="{{ route('contacts.destroy', $value->id) }}" method="post">
                         <!-- <button href = "{{ route('contacts.show', $value->id) }}" class =>Show</button> -->
-                        <a href="{{ route('contacts.show', $value->id) }}" class="btn-primary">Show</a>
-                        <a href="{{ route('contacts.edit', $value->id) }}" class="btn-secondary">Edit</a>
+                        <a href="{{ route('contacts.show', $value->id) }}" class="btn btn-primary">Show</a>
+                        <a href="{{ route('contacts.edit', $value->id) }}" class="btn btn-secondary">Edit</a>
                         <!-- <a href="" class="btn btn-secondary">Print</a> -->
                         @csrf
                         @method('DELETE')

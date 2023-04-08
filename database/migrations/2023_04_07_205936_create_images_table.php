@@ -1,10 +1,10 @@
 <?php
- 
+
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
- 
-class CreateFileUpload extends Migration
+
+class CreateImagesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,14 @@ class CreateFileUpload extends Migration
      */
     public function up()
     {
-        Schema::create('upload_file', function (Blueprint $table) {
+        Schema::create('images', function (Blueprint $table) {
             $table->id();
-            $table->string('filename');
-            $table->string('filepath');
-            $table->string('type');
+            $table->string('name')->nullable();
+            $table->string('image_path')->nullable();
             $table->timestamps();
         });
     }
- 
+
     /**
      * Reverse the migrations.
      *
@@ -29,6 +28,6 @@ class CreateFileUpload extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('upload_file');
+        Schema::dropIfExists('images');
     }
 }
