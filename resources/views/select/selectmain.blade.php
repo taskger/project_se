@@ -13,14 +13,29 @@
         
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2>EVCARE
-                <a href="http://127.0.0.1:8000/home" > home </a>
+                <h2>
+                <a href="http://127.0.0.1:8000/home" > EVCARE </a>
                 </h2>
             </div>
-
-            
+   
         </div>
 </div>
+          <div class="left">   
+            <strong>เลือกแผนประกัน</strong><br>
+              <select  name="prefix" id="prefix" >
+                  <option value="axa">axa</option>
+                  <option value="วิริยะ">วิริยะ</option>
+              </select>        
+          </div>
+          <div class="left">
+            <strong>เลือกทุนประกัน</strong><br>
+              <select name="prefix" id="prefix">
+                  <option value="200000">200,000</option>
+                  <option value="400000">400,000</option>
+                  <option value="600000">600,000</option>
+              </select>
+          </div>
+<br><br>
 <h4 class = "blue">&ensp;&ensp;&ensp;ความรับผิดชอบต่อบุคคลภายนอก</h4>
 <h4 class = "gray">&ensp;&ensp;&ensp;ความเสียหายต่อชีวิต ร่างกายหรืออนามัยเฉพาะส่วนเกิน พ.ร.บ/คน</h4> 
 <h4 class = "blue">&ensp;&ensp;&ensp;1,000,000 บาท</h4>
