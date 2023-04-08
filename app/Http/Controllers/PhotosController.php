@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Image;
+use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 
 class PhotosController extends Controller
 {
@@ -21,6 +23,7 @@ class PhotosController extends Controller
   }
 
   public function store(Request $req){
+    $usr = Auth::user('name');
     $req->validate([
       'imageFile' => 'required',
       'imageFile.*' => 'mimes:jpeg,jpg,png,pdf|max:5120'
@@ -37,6 +40,7 @@ class PhotosController extends Controller
         $fileModal = new Image();
         $fileModal->name = json_encode($imgData);
         $fileModal->image_path = json_encode($imgData);
+        $fileModal->user = $usr;
         
        
         $fileModal->save();
